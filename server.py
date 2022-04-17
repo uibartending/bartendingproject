@@ -163,23 +163,15 @@ quiz = [
 
 @app.route('/')
 def main():
-    global learning_status
-
-    return render_template('index.html', status=learning_status)
+    return render_template('home.html')
 
 
-@app.route('/basics/<id>')
-def basics(id):
-
-    global learning_status
-    global basic_material0
-    global basic_material1
-    print(id)
-
-    if id=="0":
-        return render_template('basic0.html', status=learning_status, data=basic_material0)
-    else:
-        return render_template('basic1.html', status=learning_status, data=basic_material1)
+@app.route('/learn/<id>/<kind>/<page>')
+def learn(id, kind, page):
+    template = 'learn_'+kind+'.html'
+    materials = 'material_'+id
+    steps = 'step_'+id
+    return(render_template(template, materials=materials, steps=steps, page=page))
 
 
 @app.route('/recipes/<id>')
