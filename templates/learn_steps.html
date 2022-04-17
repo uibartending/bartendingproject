@@ -1,7 +1,32 @@
+   
 {% extends "layout.html" %}
 
 {% block content %}
 
+<script>
+    let steps = {{steps|tojson}} 
+    console.log(steps)
+    let page = {{page|tojson}} 
+    console.log(page)
+</script>
 
+<script type="text/javascript" src="{{ url_for('static', filename = 'learn_steps.js') }}"></script>
+
+<div class='container'>
+    <div class='row padded'>
+        <div class='col-md-6'>
+            <div id='instruction'></div>
+        </div>
+        <div class='col-md-6'>
+            <div id='visuals'></div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-md-3' id='backbutton'> </div>
+        <div class='col-md-9'> </div>
+        <div class='col-md-3' id='nextbutton'> </div>
+    </div>
+    
+</div>
 
 {% endblock %}
