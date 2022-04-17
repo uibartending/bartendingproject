@@ -9,39 +9,150 @@ homepage_images = [
 
 ]
 
-recipe_data = [
+material_1 = [
     {
+        id: 0,
         "title": "",
-        "description": "",
-        "img": "",
-        "items": [
-    
-        ],
-        "steps": [
-      
-        ]
+        "type": "",
+        "img": ""
     },
     {
+        id: 1,
         "title": "",
-        "description": "",
-        "img": "",
-        "items": [
-    
-        ],
-        "steps": [
-      
-        ]
+        "type": "",
+        "img": ""
     },
     {
+        id: 2,
         "title": "",
-        "description": "",
-        "img": "",
-        "items": [
-    
-        ],
-        "steps": [
-      
-        ]
+        "type": "",
+        "img": ""
+    },
+    {
+        id: 3,
+        "title": "",
+        "type": "",
+        "img": ""
+    }
+]
+
+
+steps_1 = [
+    {
+        id: 0,
+        "title": "",
+        "description": ""
+    },
+    {
+        id: 1,
+        "title": "",
+        "description": ""
+    },
+    {
+        id: 2,
+        "title": "",
+        "description": ""
+    },
+    {
+        id: 3,
+        "title": "",
+        "description": ""
+    }
+]
+
+material_2 = [
+    {
+        id: 0,
+        "title": "",
+        "img": ""
+    },
+    {
+        id: 1,
+        "title": "",
+        "img": ""
+    },
+    {
+        id: 2,
+        "title": "",
+        "img": ""
+    },
+    {
+        id: 3,
+        "title": "",
+        "img": ""
+    }
+]
+
+steps_2 = [
+    {
+        id: 0,
+        "title": "",
+        "type": "",
+        "description": ""
+    },
+    {
+        id: 1,
+        "title": "",
+        "type": "",
+        "description": ""
+    },
+    {
+        id: 2,
+        "title": "",
+ 
+        "description": ""
+    },
+    {
+        id: 3,
+        "title": "",
+        "description": ""
+    }
+]
+
+material_3 = [
+    {
+        id: 0,
+        "title": "",
+        "type": "",
+        "img": ""
+    },
+    {
+        id: 1,
+        "title": "",
+        "img": ""
+    },
+    {
+        id: 2,
+        "title": "",
+        "img": ""
+    },
+    {
+        id: 3,
+        "title": "",
+        "img": ""
+    }
+]
+
+steps_3 = [
+    {
+        id: 0,
+        "title": "",
+        "description": ""
+    },
+    {
+        id: 1,
+        "title": "",
+        "description": ""
+    },
+    {
+        id: 2,
+        "title": "",
+        "description": ""
+    },
+    {
+        id: 3,
+        "title": "",
+        "description": ""
     }
 ]
 
