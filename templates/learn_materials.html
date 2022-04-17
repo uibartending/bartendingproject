@@ -2,5 +2,30 @@
 
 {% block content %}
 
+<script>
+    let materials = {{materials|tojson}} 
+    console.log(materials)
+    let page = {{page|tojson}} 
+    console.log(page)
+</script>
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'learn_materials.js') }}"></script>
+
+<div class='container'>
+    <div class='row padded'>
+        <div class='col'>
+            <div id='recipe_name' class='text-center'></div>
+        </div>
+    </div>
+    <div class='row' id='materials'>
+        
+    </div>
+    <div class='row'>
+        <div class='col-md-3' id='backbutton'> </div>
+        <div class='col-md-9'> </div>
+        <div class='col-md-3' id='nextbutton'> </div>
+    </div>
+    
+</div>
 
 {% endblock %}
