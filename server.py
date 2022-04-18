@@ -9,6 +9,76 @@ homepage_images = [
 
 ]
 
+data = [
+    {
+        "id":"0",
+        "title":"margarita",
+        "ingredients":[
+            {
+                "id":"0",
+                "name":"ice",
+                "img":"",
+                "type":"ing"
+            },
+            {
+                "id":"1",
+                "name":"tequila",
+                "img":"",
+                "type":"ing"
+            },
+            {
+                "id":"2",
+                "name":"lime",
+                "img":"",
+                "type":"ing"
+            },
+            {
+                "id":"3",
+                "name":"shaker",
+                "img":"",
+                "type":"tool"
+            },
+        ],
+        "steps":[
+            {
+                "id":"1",
+                "text":"put ice in shaker"
+            },
+        ],
+    },
+    {
+        "id":"1",
+        "title":"cosmo",
+        "ingredients":[
+            {
+                "id":"0",
+                "name":"ice",
+                "img":"",
+                "type":"ing"
+            },
+            {
+                "id":"1",
+                "name":"vodka",
+                "img":"",
+                "type":"ing"
+            },
+            {
+                "id":"2",
+                "name":"cranberry",
+                "img":"",
+                "type":"ing"
+            },
+            {
+                "id":"2",
+                "name":"cranberry",
+                "img":"",
+                "type":"tool"
+            },
+        ],
+
+    },
+]
+
 material_1 = [
     {
         id: 0,
@@ -168,9 +238,13 @@ def main():
 
 @app.route('/learn/<id>/<kind>/<page>')
 def learn(id, kind, page):
-    template = 'learn_'+kind+'.html'
-    materials = 'material_'+id
-    steps = 'step_'+id
+    template = 'learn_'+str(kind)+'.html'
+    to_display = data[0]
+    for drink in data:
+        if drink["id"]==str(id):
+            to_display = drink
+    materials=to_display["ingredients"]
+    steps=to_display["steps"]
     return(render_template(template, materials=materials, steps=steps, page=page))
 
 
