@@ -16,35 +16,55 @@ data = [
         "ingredients":[
             {
                 "id":"0",
-                "name":"ice",
-                "img":"",
+                "name":"Ice",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
                 "type":"ing"
             },
             {
                 "id":"1",
-                "name":"tequila",
-                "img":"",
+                "name":"Tequila",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
                 "type":"ing"
             },
             {
                 "id":"2",
-                "name":"lime",
-                "img":"",
+                "name":"Lime",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
                 "type":"ing"
             },
             {
                 "id":"3",
-                "name":"shaker",
-                "img":"",
+                "name":"Shaker",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
                 "type":"tool"
             },
+            {
+                "id":"4",
+                "name":"Margarita Glass",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+                "type":"tool"
+            },
+            {
+                "id":"5",
+                "name":"Measurements",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+                "type":"tool"
+            }
         ],
         "steps":[
             {
-                "id":"1",
-                "text":"put ice in shaker"
+                "id":"0",
+                "text":"Squeeze 1 oz. of lime juice. Measure out 1 oz. Cointreau. Measure out 2 oz. Tequila."
             },
-        ],
+            {
+                "id":"1",
+                "text":"Combine ingredients into shaker. Shake well to combine."
+            },
+            {
+                "id":"2",
+                "text":"Optional: Salt rims of margarita glass. Optional: Slice lime wedges to put on side. Pour drink into margarita glass + enjoy!"
+            },
+        ]
     },
     {
         "id":"1",
@@ -52,20 +72,26 @@ data = [
         "ingredients":[
             {
                 "id":"0",
-                "name":"ice",
-                "img":"",
+                "name":"Ice",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
                 "type":"ing"
             },
             {
                 "id":"1",
-                "name":"vodka",
-                "img":"",
+                "name":"Vodka",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
                 "type":"ing"
             },
             {
                 "id":"2",
-                "name":"cranberry",
-                "img":"",
+                "name":"Cranberry",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+                "type":"ing"
+            },
+            {
+                "id":"3",
+                "name":"Cranberry",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
                 "type":"ing"
             },
             {
@@ -73,9 +99,22 @@ data = [
                 "name":"cranberry",
                 "img":"",
                 "type":"tool"
-            },
+            }
         ],
-
+          "steps":[
+            {
+                "id":"1",
+                "text":"Squeeze 1 oz. of lime juice. Measure out 1 oz. Cointreau. Measure out 2 oz. Tequila."
+            },
+            {
+                "id":"2",
+                "text":"Combine ingredients into shaker. Shake well to combine."
+            },
+            {
+                "id":"3",
+                "text":"Optional: Salt rims of margarita glass. Optional: Slice lime wedges to put on side. Pour drink into margarita glass + enjoy!"
+            },
+        ]
     },
 ]
 
