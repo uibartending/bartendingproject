@@ -10,112 +10,156 @@ homepage_images = [
 ]
 
 data = [
-    {
-        "id":"0",
-        "title":"margarita",
-        "ingredients":[
-            {
-                "id":"0",
-                "name":"Ice",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
-                "type":"ing"
-            },
-            {
-                "id":"1",
-                "name":"Tequila",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
-                "type":"ing"
-            },
-            {
-                "id":"2",
-                "name":"Lime",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
-                "type":"ing"
-            },
-            {
-                "id":"3",
-                "name":"Shaker",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
-                "type":"tool"
-            },
-            {
-                "id":"4",
-                "name":"Margarita Glass",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
-                "type":"tool"
-            },
-            {
-                "id":"5",
-                "name":"Measurements",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
-                "type":"tool"
-            }
-        ],
-        "steps":[
-            {
-                "id":"0",
-                "text":"Squeeze 1 oz. of lime juice. Measure out 1 oz. Cointreau. Measure out 2 oz. Tequila."
-            },
-            {
-                "id":"1",
-                "text":"Combine ingredients into shaker. Shake well to combine."
-            },
-            {
-                "id":"2",
-                "text":"Optional: Salt rims of margarita glass. Optional: Slice lime wedges to put on side. Pour drink into margarita glass + enjoy!"
-            },
-        ]
+{
+       "id":"1",
+       "title":"cosmo",
+       "ingredients":[
+           {
+               "id":"0",
+               "name":"Ice",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"1",
+               "name":"Tequila",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"2",
+               "name":"Triple sec",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"3",
+               "name":"Cranberry juice",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"4",
+               "name":"Lime juice",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"5",
+               "name":"Orange peel",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           }
+       ],
+       "tools": [
+           {
+               "id":"0",
+               "name":"Shaker",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"0",
+               "name":"Martini glass",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"2",
+               "name":"Measurements",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"3",
+               "name":"Teaspoon",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           }
+       ],
+       "steps":[
+           {
+               "id":"0",
+               "text":"Take 1 teaspoon of lime juice. Take 1 teaspoon of cranberry juice. Measure out 2 oz. vodka. Measure out 1/2 oz. triple sec."
+           },
+           {
+               "id":"1",
+               "text":"Combine ingredients into shaker. Shake well to combine."
+           },
+           {
+               "id":"2",
+               "text":"Optional: Garnish with orange peel. Optional: Peel the orange twist over the filled cocktail glass. Pour drink into martini glass + enjoy!"
+           },
+       ]
     },
+
     {
-        "id":"1",
-        "title":"cosmo",
-        "ingredients":[
-            {
-                "id":"0",
-                "name":"Ice",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
-                "type":"ing"
-            },
-            {
-                "id":"1",
-                "name":"Vodka",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
-                "type":"ing"
-            },
-            {
-                "id":"2",
-                "name":"Cranberry",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
-                "type":"ing"
-            },
-            {
-                "id":"3",
-                "name":"Cranberry",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
-                "type":"ing"
-            },
-            {
-                "id":"2",
-                "name":"cranberry",
-                "img":"",
-                "type":"tool"
-            }
-        ],
-          "steps":[
-            {
-                "id":"1",
-                "text":"Squeeze 1 oz. of lime juice. Measure out 1 oz. Cointreau. Measure out 2 oz. Tequila."
-            },
-            {
-                "id":"2",
-                "text":"Combine ingredients into shaker. Shake well to combine."
-            },
-            {
-                "id":"3",
-                "text":"Optional: Salt rims of margarita glass. Optional: Slice lime wedges to put on side. Pour drink into margarita glass + enjoy!"
-            },
-        ]
-    },
+       "id":"2",
+       "title": "Piña Colada",
+       "ingredients":[
+           {
+               "id":"0",
+               "name":"Ice",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"1",
+               "name":"Light rum",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"2",
+               "name":"Coconut cream",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"3",
+               "name":"Pineapple juice",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"4",
+               "name":"Lime juice",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"5",
+               "name":"Pineapple wedge",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"6",
+               "name":"Pineapple leaf",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           }
+       ],
+       "tools": [
+           {
+               "id":"0",
+               "name":"Shaker",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"0",
+               "name":"Martini glass",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"2",
+               "name":"Measurements",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           },
+           {
+               "id":"3",
+               "name":"Teaspoon",
+               "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
+           }
+       ],
+       "steps":[
+           {
+               "id":"0",
+               "text":"Take 5 teaspoons of coconut cream. Take 5 teaspoons of pineapple juice. Measure out 2 oz. light rum. Measure out 1/2 oz. lime juice."
+           },
+           {
+               "id":"1",
+               "text":"Combine ingredients into shaker. Shake vigorously to combine."
+           },
+           {
+               "id":"2",
+               "text":"Optional: Garnish with a pineapple leaf. Optional: Garnish with a pineapple wedge. Pour drink into martini glass + enjoy!"
+           },
+       ]
+},
 ]
 
 material_1 = [
