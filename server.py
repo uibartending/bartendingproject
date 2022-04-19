@@ -269,12 +269,13 @@ def learn(id, kind, page):
     return(render_template(template, materials=materials, tools=tools, step=step, page=page, id=id))
 
 
-@app.route('/quiz/<id>')
-def quiz(id):
+@app.route('/quiz/<quiznum>/<id>')
+def quiz(id, quiznum):
     temp = int(id)
+    template = 'quiz_level'+str(quiznum)+'.html'
     global data 
        
-    return render_template('quiz_level2.html', data=data, id=temp)
+    return render_template(template, data=data, id=temp)
 
 
 
