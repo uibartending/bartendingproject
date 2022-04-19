@@ -2,10 +2,20 @@
 
 {% block content %}
 
-<span class="header">Welcome to Let's Make Drinks!</span>
-<div class="subheader">
-Learn and quiz yourself on how to make 3 classic cocktails: 
-1.) Margarita, 2.) Cosmopolitan, and a 3.) Piña Colada
+<script>
+    let data = {{data|tojson}} 
+    console.log(data)
+</script>
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
+
+<div class="header text-center">Welcome to Let's Make Drinks!</div>
+<div class="subheader text-center">
+    Learn and quiz yourself on how to make 3 classic cocktails:  
+</div>
+<div id='cocktails' class='text-center'></div>
+<div class='text-center'>
+    <button id='startbutton'>Click to get started!</button>
 </div>
 
 {% endblock %}
