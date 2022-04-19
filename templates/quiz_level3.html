@@ -18,21 +18,39 @@
     </div>
   </div> 
   
-  <div class="col-md-4">
-    {% for ingredients in data[id].ingredients %} <!--loop through each ingredient--> 
-      <div class="row"> <!--create a new row-->
-        <input type="text" id="amount">&nbsp;<div>oz. of</div> 
+  
+  <div class="col-md-10">
+      <div class="container-buffer">
+    <div class="row">   
+    {% for ingredients in data[id].ingredients %} <!--loop through the ingredient images-->
+        <div class = "col-md-4"><img src= {{ingredients.img}}></div>
+        <div class = "col-md-2">{{ingredients.name}}</div>
+        <div class = "col-md-2"> <input type="text" id="inputText"> </div>
+        <div class = "col-md-2"> <p><i class="arrow up"></i></p> <p><i class="arrow down"></i></p> </div>
+
+    {% endfor %}
+    </div>
       </div>
+  </div>
+  
+  <div class="col-md-8">
+    {% for ingredient in data[id].ingredients %} <!--loop through each ingredient--> 
+      <div> <!--create a new row-->
+        <div class="col-md-3">
+          <input type="text" value = "ingredient amount" id={{ingredient.id}}>&nbsp;
+        </div>
+        <div class="col-md-2">
+          {{ingredient.unit}}
+        </div>
+        <div class="col-md-3">
+          <input type="text" value = "ingredient name" id={{ingredient.name}}>&nbsp;
+        </div>
+          
+        </div>
     {% endfor %}
   </div>
   
-  <div class="col-md-4">
-    {% for ingredients in data[id].ingredients %} <!--loop through the ingredient names--> 
-      <div class="row"> <!--create a new row-->
-        <input type="text" id="ingredient"> 
-      </div>
-    {% endfor %}
-  </div>
+  
   
   <div class="row">
     <button type="button">Done</button>
