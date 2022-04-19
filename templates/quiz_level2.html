@@ -21,10 +21,13 @@
   }
 </style> 
 
-<body> 
-<!--   <div class="col-md-4">
+<body>
+<div class="container"> 
+  <div class="row">
+
+<div class="col-md-2">
     <div class="row">
-      <h2>Quiz: Make a Classic {{data.title}}</h2>
+      <h2>Quiz: Make a Classic {{data[id].title}} {{id}}</h2>
     </div>
     <div class="row">
       <h2>Level 2</h2><br>
@@ -35,27 +38,23 @@
       <div>Adjust the amount of each ingredient to make the perfect drink!</div>
     </div>
   </div> 
-  
-<!--   <div class="col-md-2">
-    {% for ingredients in data %} <!--loop through the ingredient images--> 
-      <div class="row"> <!--create a new row-->
-        <div>Ingredient of id1</div> <!-- delete this text later --> 
-        <div>{{data[id].ingredients.img}}</div>
+
+  <div class="col-md-4">
+    {% for ingredients in data[id].ingredients %} <!--loop through the ingredient images--> 
+      <div> <!--create a new row-->
+        <img src={{ingredients.img}}>
       </div>
     {% endfor %}
   </div>
-  
+
   <div class="col-md-2">
-    {% for ingredients in data %} <!--loop through the ingredient names--> 
-      <div class="row"> <!--create a new row-->
-        <div>Name of ingredient</div> <!-- delete this text later --> 
-        <div>{{data[id].ingredients.name}}</div>
-      </div>
+    {% for ingredients in data[id].ingredients %} <!--loop through the ingredient images--> 
+        <div>{{ingredients.name}}</div>
     {% endfor %}
   </div>
-  
+
   <div class="col-md-2">
-    {% for ingredients in data %} <!--loop through the ingredient names--> 
+    {% for ingredients in data[id].ingredients %} <!--loop through the ingredient images--> 
       <div class="row"> <!--create a new row-->
         <div>Fill in the blank box</div> <!-- delete this text later --> 
         <input type="text" id="inputText">
@@ -64,19 +63,21 @@
   </div>
   
   <div class="col-md-2">
-    {% for ingredients in data %} <!--loop through the ingredient names--> 
+    {% for ingredients in data[id].ingredients %} <!--loop through the ingredient images--> 
       <div class="row"> <!--create a new row-->
-        <div>Arrows</div> <!-- delete this text later --> 
         <p><i class="arrow up"></i></p>
         <p><i class="arrow down"></i></p> <!-- hope this works -->
       </div>
     {% endfor %}
-  </div> -->
+  </div> 
   
   <div class="row">
     <button type="button" id="doneButton">Done</button>
-  </div> -->
+  </div>
   
+</div>
+</div>
 </body> 
+
     
 {% endblock %}
