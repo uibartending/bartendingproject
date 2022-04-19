@@ -15,17 +15,20 @@ var ingredients = [
 ]
 var ingredientsCorrect = [
 ]
+var id = 1
 function getclient(){
-
+    let data_to_save = JSON.stringify({"id":id})
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: window.location.origin+"/ingredients",
         dataType : "json",
         contentType: "application/json; charset=utf-8",
+        data : data_to_save,
         success: function(result){
             ingredients  = result["ingredients"]
             ingredientsCorrect  = result["ingredientsCorrect"]
             console.log(ingredients)
+            makenames(ingredients, ppc_members)
         },
         error: function(request, status, error){
             console.log("Error");
@@ -58,7 +61,7 @@ function makenames(ingredients, ppc_members){
 
 $(document).ready(function(){
     getclient()
-    makenames(ingredients, ppc_members)
+
     $("#ppc_drop").droppable({
         drop: function(event, ui){
             console.log(ui.draggable.data("name"))
