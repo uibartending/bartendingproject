@@ -278,11 +278,11 @@ data = [
 },
 ]
 
-
 quiz = [
 
 ]
-
+ingredientsTotal=[
+ ]
 
 @app.route('/')
 def main():
@@ -305,7 +305,23 @@ def learn(id, kind, page):
             step=i
     return(render_template(template, materials=materials, tools=tools, step=step, page=page, id=id))
 
-
+@app.route('/ingredients', methods=['GET', 'POST'])
+def getname():
+    global data
+    global ingredientsTotal
+    json_data = request.get_json() 
+    idnum = json_data["id"]
+    ingrCorrect = [] 
+    
+    for ing in data[idnum]["ingredients"]:
+        ingrCorrect.append(ing["name"])
+    for  drink in data:
+        for  ing in drink["ingredients"]:
+            if ing["name"] not in ingredientsTotal:
+                ingredientsTotal.append(ing["name"])
+    
+    #send back the WHOLE array of data, so the client can redisplay it
+    return jsonify(ingredients = ingredientsTotal, ingredientsCorrect = ingrCorrect)
 @app.route('/quiz/<quiznum>/<id>')
 def quiz(id, quiznum):
     temp = int(id)
