@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+        <script type="text/javascript" src="ppc.js"></script>
+
+        <style>
+            .header{
+                background-color: lightgrey;
+                font-size: 35;
+                padding: 70px 20px;
+            }
+            .drop_zone{
+                background-color: lightblue;
+                font-size: 20;
+                font-weight: bold;
+                padding: 15px;
+            }
+            .person{
+                border: 1px solid black;
+                cursor: move;
+                background-color: white;
+            }
+            .person:hover{
+                background-color: lightyellow;
+            }
+            .ui-draggable-dragging{
+                background-color: lightyellow;
+                z-index: 100;
+            }
+            .ui-droppable-active{
+                background-color: rgb(145, 183, 196);
+            }
+            .ui-droppable-hover{
+                background-color: rgb(110, 137, 146);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                Party Planning Committee
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="drop_zone" id="nppc_drop">Non-PPC</div>
+                    <div id="ppc"></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="drop_zone" id="ppc_drop">PPC</div>
+                    <div id="non_ppc"></div>
+                </div>
+                <div class="col-md-8"></div>
+            </div>
+        </div>
+    </body>
+</html>
