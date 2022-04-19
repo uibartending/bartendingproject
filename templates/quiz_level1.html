@@ -41,9 +41,10 @@
 </head>
 <body>
 <div class="container">
-    <div class="row">
 
-        <div class="col-md-2">
+    <br>
+    <div class="row">
+        <div class="col-md-4">
             <div>
                 <h2>Quiz: Make a Classic {{data[id].title}}</h2>
             </div>
@@ -57,13 +58,36 @@
             </div>
         </div>
         <div class="col-md-4">
+            <div class="drop_zone" id="nppc_drop">Ingriedients</div>
+            <div id="ppc"></div>
+        </div>
+        <div class="col-md-4">
+            <div class="drop_zone" id="ppc_drop">Glass</div>
+            <div id="non_ppc"></div>
+        </div>
+        <div class="col-md-8"></div>
+    </div>
+</div>
+
+<div>
+</div>
+<div>
+</div>
+
+
+<!--
+<div class="container">
+    <div class="row">
+
+
+        <div class="col-md-4">
             <div class="drop_zone" id="nppc_drop">Ingredients</div>
             {% for ingredients in data[id].ingredients %}
             <div><img src={{ingredients.img}} ></div>
             {% endfor %}
 
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" >
             <div class="drop_zone" id="ppc_drop">Glass</div>
             <div id="non_ppc">Test</div>
         </div>
@@ -71,7 +95,7 @@
 
 
 
-        <!-- TODO: PUT THE APPROPRIATE ID'S SO WE KNOW DRAG AND DROP ZONE
+        TODO: PUT THE APPROPRIATE ID'S SO WE KNOW DRAG AND DROP ZONE
          -->
         <!-- <div>
     <div class="row">
