@@ -1,16 +1,22 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="container">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<body> 
   <div class="col-md-4">
-    <div>Quiz: Make a Classic Margarita</div><br>
-    <div style="font-weight:bold">Level 2</div> 
-    <div>How well do you know the proportions?</div><br>
-    <div>Instructions</div>
-    <div>Adjust the amount of each ingredient to make the perfect drink!</div> 
+    <div class="row">
+      <h2>Quiz: Make a Classic {{data.title}}</h2>
+    </div>
+    <div class="row">
+      <h2>Level 2</h2><br>
+      <div>How well do you know the proportions?</div>
+    </div>
+    <div class="row">
+      <h2>Instructions</h2><br>
+      <div>Adjust the amount of each ingredient to make the perfect drink!</div>
+    </div>
   </div> 
-  <div class="col-md-8">
-    <div>Quiz Information</div> 
-  </div> 
+</body> 
     
 {% endblock %}
