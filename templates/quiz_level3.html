@@ -3,43 +3,54 @@
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-<body> 
-  <div class="col-md-4">
-    <div class="row">
-      <h2>Quiz: Make a Classic {{data[id].title}}</h2>
-    </div>
-    <div class="row">
-      <h2>Level 3</h2><br>
-      <div>How well do you know how to make this drink?</div>
-    </div>
-    <div class="row">
-      <h2>Instructions</h2><br>
-      <div>Fill in the blanks to make the perfect drink!</div>
-    </div>
-  </div> 
-  <div class="col-md-8">
-    {% for ingredient in data[id].ingredients %} <!--loop through each ingredient--> 
-      <div> <!--create a new row-->
-        <div class="col-md-3">
-          <input type="text" value = "ingredient amount" id={{ingredient.id}}>&nbsp;
-        </div>
-        <div class="col-md-2">
-          {{ingredient.unit}}
-        </div>
-        <div class="col-md-3">
-          <input type="text" value = "ingredient name" id={{ingredient.name}}>&nbsp;
-        </div>
-          
-        </div>
-    {% endfor %}
-  </div>
-  
-  
-  
+<body>
+<div class="container">
   <div class="row">
+
+<div class="col-md-3">
+  <div class="row">
+    <h2>Quiz: Make a Classic {{data[id].title}}</h2>
+  </div>
+  <div class="row">
+    <h2>Level 3</h2><br>
+    <div>How well do you know how to make this drink?</div>
+  </div>
+  <div class="row">
+    <h2>Instructions</h2><br>
+    <div>Fill in the blanks to make the perfect drink!</div>
+  </div>
+</div>
+<div class="col-md-9">
+
+  {% for ingredient in data[id].ingredients %} <!--loop through each ingredient-->
+  <div class="row"> <!--create a new row-->
+    <div class="col-md-4">
+      <input type="text" value = "ingredient amount" id={{ingredient.id}}>
+    </div>
+    <div class="col-md-2">
+      {{ingredient.unit}}
+    </div>
+    <div class="col-md-3">
+      <input type="text" value = "ingredient name" id={{ingredient.name}}>
+    </div>
+
+  </div>
+  {% endfor %}
+</div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-10">
+    </div>
+  <div class="col-md-2">
     <button type="button">Done</button>
   </div>
-  
-</body> 
-    
+
+</div>
+</div>
+</div>
+</body>
+
 {% endblock %}
