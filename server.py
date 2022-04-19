@@ -11,6 +11,67 @@ homepage_images = [
 
 data = [
 {
+       "id":"0",
+        "title":"margarita",
+        "ingredients":[
+            {
+                "id":"0",
+                "name":"ice",
+                "img":"",
+            },
+            {
+                "id":"1",
+                "name":"tequila",
+                "img":"",
+            },
+            {
+                "id":"2",
+                "name":"lime juice",
+                "img":"",
+            },
+            {
+                "id":"3",
+                "name":"cointreau",
+                "img":"",
+            },
+        ],
+        "tools":[
+            {
+                "id":"0",
+                "name":"shaker",
+                "img":"",
+            },
+            {
+                "id":"1",
+                "name":"glass",
+                "img":"",
+            },
+        ],
+        "steps":[
+            {
+                "id":"0",
+                "text":"Squeeze 1 oz. of lime juice<br>Measure out 1 oz. Cointreau<br>Measure out 2 oz. Tequila ",
+                "tools":["Margarita Glass", "Measurements", "Shaker"],
+                "ingredients":["Cointreau", "Lime Juice", "Tequila"],
+                "img":[""]
+            },
+            {
+                "id":"1",
+                "text":"Combine ingredients into shaker<br>Shake well to combine", 
+                "tools":["shaker"],
+                "ingredients":[""],
+                "img":[""]
+            },
+            {
+                "id":"2",
+                "text":"Optional: Salt rims of margarita glass <br>Optional: Slice lime wedges to put on side<br>Pour drink into margarita glass + enjoy!",
+                "tools":["Margarita Glass"],
+                "ingredients":["Salt", "Fresh Lime"],
+                "img":[""]
+            },
+        ],
+    },
+    {
        "id":"1",
        "title":"cosmo",
        "ingredients":[
@@ -162,152 +223,6 @@ data = [
 },
 ]
 
-material_1 = [
-    {
-        id: 0,
-        "title": "",
-        "type": "",
-        "img": ""
-    },
-    {
-        id: 1,
-        "title": "",
-        "type": "",
-        "img": ""
-    },
-    {
-        id: 2,
-        "title": "",
-        "type": "",
-        "img": ""
-    },
-    {
-        id: 3,
-        "title": "",
-        "type": "",
-        "img": ""
-    }
-]
-
-
-steps_1 = [
-    {
-        id: 0,
-        "title": "",
-        "description": ""
-    },
-    {
-        id: 1,
-        "title": "",
-        "description": ""
-    },
-    {
-        id: 2,
-        "title": "",
-        "description": ""
-    },
-    {
-        id: 3,
-        "title": "",
-        "description": ""
-    }
-]
-
-material_2 = [
-    {
-        id: 0,
-        "title": "",
-        "img": ""
-    },
-    {
-        id: 1,
-        "title": "",
-        "img": ""
-    },
-    {
-        id: 2,
-        "title": "",
-        "img": ""
-    },
-    {
-        id: 3,
-        "title": "",
-        "img": ""
-    }
-]
-
-steps_2 = [
-    {
-        id: 0,
-        "title": "",
-        "type": "",
-        "description": ""
-    },
-    {
-        id: 1,
-        "title": "",
-        "type": "",
-        "description": ""
-    },
-    {
-        id: 2,
-        "title": "",
- 
-        "description": ""
-    },
-    {
-        id: 3,
-        "title": "",
-        "description": ""
-    }
-]
-
-material_3 = [
-    {
-        id: 0,
-        "title": "",
-        "type": "",
-        "img": ""
-    },
-    {
-        id: 1,
-        "title": "",
-        "img": ""
-    },
-    {
-        id: 2,
-        "title": "",
-        "img": ""
-    },
-    {
-        id: 3,
-        "title": "",
-        "img": ""
-    }
-]
-
-steps_3 = [
-    {
-        id: 0,
-        "title": "",
-        "description": ""
-    },
-    {
-        id: 1,
-        "title": "",
-        "description": ""
-    },
-    {
-        id: 2,
-        "title": "",
-        "description": ""
-    },
-    {
-        id: 3,
-        "title": "",
-        "description": ""
-    }
-]
 
 quiz = [
 
@@ -327,18 +242,13 @@ def learn(id, kind, page):
         if drink["id"]==str(id):
             to_display = drink
     materials=to_display["ingredients"]
+    tools=to_display["tools"]
     steps=to_display["steps"]
-    return(render_template(template, materials=materials, steps=steps, page=page))
-
-
-@app.route('/recipes/<id>')
-def recipe(id):
-
-    global recipe_data
-    global learning_status
-    id = int(id)
-
-    return render_template('recipe.html', status=learning_status, data=recipe_data[int(id)], recipe_index=id)
+    step=steps[0]
+    for i in steps:
+        if i["id"]==str(int(page)-1):
+            step=i
+    return(render_template(template, materials=materials, tools=tools, step=step, page=page))
 
 
 @app.route('/quiz/<id>')
