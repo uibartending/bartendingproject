@@ -113,7 +113,7 @@ data = [
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
            {
-               "id":"0",
+               "id":"1",
                "name":"Martini glass",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
@@ -200,7 +200,7 @@ data = [
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
            {
-               "id":"0",
+               "id":"1",
                "name":"Martini glass",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
