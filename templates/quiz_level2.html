@@ -17,6 +17,15 @@
       <div>Adjust the amount of each ingredient to make the perfect drink!</div>
     </div>
   </div> 
+  
+  <div class="col-md-2">
+    {% for ingredients.img in data.ingredients.img %} <!--loop through the ingredient images--> 
+      <div class="row"> <!--create a new row-->
+        <div>Ingredient of id1</div> <!-- delete this text later --> 
+        <div>{{data.ingredients.img}}</div>
+      </div>
+    {% endfor %}
+  </div>
 </body> 
     
 {% endblock %}
