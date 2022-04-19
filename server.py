@@ -249,7 +249,7 @@ quiz = [
 
 @app.route('/')
 def main():
-    return render_template('home.html')
+    return render_template('home.html', data=data)
 
 
 @app.route('/learn/<id>/<kind>/<page>')
