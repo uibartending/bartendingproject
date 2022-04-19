@@ -13,6 +13,7 @@ data = [
 {
        "id":"0",
         "title":"margarita",
+       "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
         "ingredients":[
             {
                 "id":"0",
@@ -82,6 +83,7 @@ data = [
     {
        "id":"1",
        "title":"cosmo",
+        "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
        "ingredients":[
            {
                "id":"0",
@@ -176,6 +178,7 @@ data = [
     {
        "id":"2",
        "title": "Piña Colada",
+       "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
        "ingredients":[
            {
                "id":"0",
