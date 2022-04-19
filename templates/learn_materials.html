@@ -5,6 +5,8 @@
 <script>
     let materials = {{materials|tojson}} 
     console.log(materials)
+    let tools = {{tools|tojson}} 
+    console.log(tools)
     let page = {{page|tojson}} 
     console.log(page)
 </script>
@@ -14,7 +16,7 @@
 <div class='container'>
     <div class='row padded'>
         <div class='col'>
-            <div id='recipe_name' class='text-center'></div>
+            <div id='section' class=''></div>
         </div>
     </div>
     <div class='row' id='materials'>
