@@ -17,34 +17,34 @@ data = [
             {
                 "id":"0",
                 "name":"ice",
-                "img":"",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
             },
             {
                 "id":"1",
                 "name":"tequila",
-                "img":"",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
             },
             {
                 "id":"2",
                 "name":"lime juice",
-                "img":"",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
             },
             {
                 "id":"3",
                 "name":"cointreau",
-                "img":"",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
             },
         ],
         "tools":[
             {
                 "id":"0",
                 "name":"shaker",
-                "img":"",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
             },
             {
                 "id":"1",
                 "name":"glass",
-                "img":"",
+                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
             },
         ],
         "steps":[
@@ -53,21 +53,21 @@ data = [
                 "text":"Squeeze 1 oz. of lime juice<br>Measure out 1 oz. Cointreau<br>Measure out 2 oz. Tequila ",
                 "tools":["Margarita Glass", "Measurements", "Shaker"],
                 "ingredients":["Cointreau", "Lime Juice", "Tequila"],
-                "img":[""]
+                "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
             },
             {
                 "id":"1",
-                "text":"Combine ingredients into shaker<br>Shake well to combine", 
+                "text":"Combine ingredients into shaker<br>Shake well to combine",
                 "tools":["shaker"],
                 "ingredients":[""],
-                "img":[""]
+                "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
             },
             {
                 "id":"2",
                 "text":"Optional: Salt rims of margarita glass <br>Optional: Slice lime wedges to put on side<br>Pour drink into margarita glass + enjoy!",
                 "tools":["Margarita Glass"],
                 "ingredients":["Salt", "Fresh Lime"],
-                "img":[""]
+                "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
             },
         ],
     },
@@ -131,15 +131,24 @@ data = [
        "steps":[
            {
                "id":"0",
-               "text":"Take 1 teaspoon of lime juice. Take 1 teaspoon of cranberry juice. Measure out 2 oz. vodka. Measure out 1/2 oz. triple sec."
+               "text":"Take 1 teaspoon of lime juice. Take 1 teaspoon of cranberry juice. Measure out 2 oz. vodka. Measure out 1/2 oz. triple sec.",
+               "tools":["teaspoon", "measurements", "martini glass"],
+               "ingredients":["lime juice", "cranberry juice", "vodka", "triple sec"],
+               "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
            },
            {
                "id":"1",
-               "text":"Combine ingredients into shaker. Shake well to combine."
+               "text":"Combine ingredients into shaker. Shake well to combine.",
+               "tools":["shaker"],
+               "ingredients":[""],
+               "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
            },
            {
                "id":"2",
-               "text":"Optional: Garnish with orange peel. Optional: Peel the orange twist over the filled cocktail glass. Pour drink into martini glass + enjoy!"
+               "text":"Optional: Garnish with orange peel. Optional: Peel the orange twist over the filled cocktail glass. Pour drink into martini glass + enjoy!",
+               "tools":["martini glass"],
+               "ingredients":["orange peel"],
+               "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
            },
        ]
     },
@@ -209,15 +218,24 @@ data = [
        "steps":[
            {
                "id":"0",
-               "text":"Take 5 teaspoons of coconut cream. Take 5 teaspoons of pineapple juice. Measure out 2 oz. light rum. Measure out 1/2 oz. lime juice."
+               "text":"Take 5 teaspoons of coconut cream. Take 5 teaspoons of pineapple juice. Measure out 2 oz. light rum. Measure out 1/2 oz. lime juice.",
+               "tools":["teaspoon", "measurements", "martini glass"],
+               "ingredients":["coconut cream", "pineapple juice", "light rum", "lime juice"],
+               "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
            },
            {
                "id":"1",
-               "text":"Combine ingredients into shaker. Shake vigorously to combine."
+               "text":"Combine ingredients into shaker. Shake vigorously to combine.",
+               "tools":["shaker"],
+               "ingredients":[""],
+               "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
            },
            {
                "id":"2",
-               "text":"Optional: Garnish with a pineapple leaf. Optional: Garnish with a pineapple wedge. Pour drink into martini glass + enjoy!"
+               "text":"Optional: Garnish with a pineapple leaf. Optional: Garnish with a pineapple wedge. Pour drink into martini glass + enjoy!",
+               "tools":["martini glass"],
+               "ingredients":["pineapple leaf", "pineapple wedge"],
+               "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
            },
        ]
 },
