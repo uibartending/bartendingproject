@@ -8,24 +8,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz1.js') }}"></script>
 <style>
-    .arrow{
-        border: solid black;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-    }
-
-    .up{
-        transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
-    }
-    .down{
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-    }
-
-
-            .header{
+           .header{
                 background-color: lightgrey;
                 font-size: 35;
                 padding: 70px 20px;
@@ -57,24 +40,53 @@
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="header">
-                Party Planning Committee
+    <div class="container">
+    <div class="row">
+            
+            <div class="col-md-2">
+                <div>
+                    <h2>Quiz: Make a Classic {{data[id].title}}</h2>
+                </div>
+                <div>
+                    <h2>Level 1</h2></br>
+                    <div>How well do you know your ingredients?</div>
+                </div>
+                <div>
+                    <h2>Instructions</h2><br>
+                    <div>Click images to drag and drop the correct ingredients into the glass</div>
+                </div>
             </div>
-            <br>
+
+            <div class="col-md-8">
+                <div class="container">
+                <div class="row">
+                {% for ingredients in data[id].ingredients %}
+                    <div class= "col-md-4"><img src={{ingredients.img}></div>
+                    <div class="col-md-4">Glass</div>
+                </div>
+                {% endfor %}
+                </div>
+            </div>
+
+<!-- TODO: PUT THE APPROPRIATE ID'S SO WE KNOW DRAG AND DROP ZONE 
+ -->
+                <!-- <div>
             <div class="row">
                 <div class="col-md-2">
-                    <div class="drop_zone" id="nppc_drop">Non-PPC</div>
+                    <div class="drop_zone" id="nppc_drop">Ingredients</div>
                     <div id="ppc"></div>
                 </div>
                 <div class="col-md-2">
-                    <div class="drop_zone" id="ppc_drop">PPC</div>
+                    <div class="drop_zone" id="ppc_drop">Glass</div>
                     <div id="non_ppc"></div>
                 </div>
                 <div class="col-md-8"></div>
             </div>
         </div>
-    </body>
+    </div> -->
+</div>
+</div>
+</body>
 </html>
 
 {% endblock %}
