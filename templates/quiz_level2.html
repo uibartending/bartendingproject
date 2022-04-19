@@ -2,6 +2,23 @@
 {% block content %}
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<style> 
+  .arrow{
+    border: solid black; 
+    border-width: 0 3px 3px 0; 
+    display: inline-block; 
+    padding: 3px; 
+  }
+  
+  .up{
+    transform: rotate(-135deg); 
+    -webkit-transform: rotate(135deg);
+  }
+  .down{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+</style> 
 
 <body> 
   <div class="col-md-4">
@@ -26,6 +43,35 @@
       </div>
     {% endfor %}
   </div>
+  
+  <div class="col-md-2">
+    {% for ingredients.name in data.ingredients.name %} <!--loop through the ingredient names--> 
+      <div class="row"> <!--create a new row-->
+        <div>Name of ingredient</div> <!-- delete this text later --> 
+        <div>{{data.ingredients.name}}</div>
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div class="col-md-2">
+    {% for ingredients.name in data.ingredients.name %} <!--loop through the ingredient names--> 
+      <div class="row"> <!--create a new row-->
+        <div>Fill in the blank box</div> <!-- delete this text later --> 
+        <input type="text" id="inputText">
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div class="col-md-2">
+    {% for ingredients.name in data.ingredients.name %} <!--loop through the ingredient names--> 
+      <div class="row"> <!--create a new row-->
+        <div>Arrows</div> <!-- delete this text later --> 
+        <p><i class="arrow up"></i></p>
+        <p><i class="arrow down"></i></p> <!-- hope this works -->
+      </div>
+    {% endfor %}
+  </div>
+  
 </body> 
     
 {% endblock %}
