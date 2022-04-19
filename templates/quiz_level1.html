@@ -1,8 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<script type="text/javascript" src="{{ url_for('static', filename = 'quiz_level2.js') }}"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script type="text/javascript" src="ppc.js"></script>
 <style>
     .arrow{
         border: solid black;
@@ -19,64 +23,58 @@
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
     }
-</style>
 
-<body>
-<div class="col-md-4">
-    <div class="row">
-        <h2>Quiz: Make a Classic {{data.title}}</h2>
-    </div>
-    <div class="row">
-        <h2>Level 2</h2><br>
-        <div>How well do you know the proportions?</div>
-    </div>
-    <div class="row">
-        <h2>Instructions</h2><br>
-        <div>Adjust the amount of each ingredient to make the perfect drink!</div>
-    </div>
-</div>
 
-<div class="col-md-2">
-    {% for ingredients.img in data.ingredients.img %} <!--loop through the ingredient images-->
-    <div class="row"> <!--create a new row-->
-        <div>Ingredient of id1</div> <!-- delete this text later -->
-        <div>{{data.ingredients.img}}</div>
-    </div>
-    {% endfor %}
-</div>
-
-<div class="col-md-2">
-    {% for ingredients.name in data.ingredients.name %} <!--loop through the ingredient names-->
-    <div class="row"> <!--create a new row-->
-        <div>Name of ingredient</div> <!-- delete this text later -->
-        <div>{{data.ingredients.name}}</div>
-    </div>
-    {% endfor %}
-</div>
-
-<div class="col-md-2">
-    {% for ingredients.name in data.ingredients.name %} <!--loop through the ingredient names-->
-    <div class="row"> <!--create a new row-->
-        <div>Fill in the blank box</div> <!-- delete this text later -->
-        <input type="text" id="inputText">
-    </div>
-    {% endfor %}
-</div>
-
-<div class="col-md-2">
-    {% for ingredients.name in data.ingredients.name %} <!--loop through the ingredient names-->
-    <div class="row"> <!--create a new row-->
-        <div>Arrows</div> <!-- delete this text later -->
-        <p><i class="arrow up"></i></p>
-        <p><i class="arrow down"></i></p> <!-- hope this works -->
-    </div>
-    {% endfor %}
-</div>
-
-<div class="row">
-    <button type="button" id="doneButton">Done</button>
-</div>
-
-</body>
+            .header{
+                background-color: lightgrey;
+                font-size: 35;
+                padding: 70px 20px;
+            }
+            .drop_zone{
+                background-color: lightblue;
+                font-size: 20;
+                font-weight: bold;
+                padding: 15px;
+            }
+            .person{
+                border: 1px solid black;
+                cursor: move;
+                background-color: white;
+            }
+            .person:hover{
+                background-color: lightyellow;
+            }
+            .ui-draggable-dragging{
+                background-color: lightyellow;
+                z-index: 100;
+            }
+            .ui-droppable-active{
+                background-color: rgb(145, 183, 196);
+            }
+            .ui-droppable-hover{
+                background-color: rgb(110, 137, 146);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                Party Planning Committee
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="drop_zone" id="nppc_drop">Non-PPC</div>
+                    <div id="ppc"></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="drop_zone" id="ppc_drop">PPC</div>
+                    <div id="non_ppc"></div>
+                </div>
+                <div class="col-md-8"></div>
+            </div>
+        </div>
+    </body>
+</html>
 
 {% endblock %}
