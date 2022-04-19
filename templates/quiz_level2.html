@@ -26,14 +26,14 @@
   <div class="row">
 
 <div class="col-md-2">
-    <div class="row">
+    <div >
       <h2>Quiz: Make a Classic {{data[id].title}} {{id}}</h2>
     </div>
-    <div class="row">
+    <div >
       <h2>Level 2</h2><br>
       <div>How well do you know the proportions?</div>
     </div>
-    <div class="row">
+    <div >
       <h2>Instructions</h2><br>
       <div>Adjust the amount of each ingredient to make the perfect drink!</div>
     </div>
@@ -42,7 +42,7 @@
   
 
   <div class="col-md-10">
-    <div class="row">   
+    <div class="container">   
     {% for ingredients in data[id].ingredients %} <!--loop through the ingredient images--> 
           <div class = "col-md-2">{{ingredients.name}}</div>
           <div class = "col-md-4"><img src= {{ingredients.img}}></div>
