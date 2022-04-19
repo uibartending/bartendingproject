@@ -46,16 +46,16 @@
   </div>
   
   <div class="col-md-2">
-    {% for ingredients.name in data.ingredients.name %} <!--loop through the ingredient names--> 
+    {% for ingredients in data %} <!--loop through the ingredient names--> 
       <div class="row"> <!--create a new row-->
         <div>Name of ingredient</div> <!-- delete this text later --> 
-        <div>{{data.ingredients.name}}</div>
+        <div>{{data[id].ingredients.name}}</div>
       </div>
     {% endfor %}
   </div>
   
   <div class="col-md-2">
-    {% for ingredients.name in data.ingredients.name %} <!--loop through the ingredient names--> 
+    {% for ingredients in data %} <!--loop through the ingredient names--> 
       <div class="row"> <!--create a new row-->
         <div>Fill in the blank box</div> <!-- delete this text later --> 
         <input type="text" id="inputText">
