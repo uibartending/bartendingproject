@@ -319,9 +319,9 @@ def getname():
         for  ing in drink["ingredients"]:
             if ing["name"] not in ingredientsTotal:
                 ingredientsTotal.append(ing["name"])
-    
+    length = len(data)
     #send back the WHOLE array of data, so the client can redisplay it
-    return jsonify(ingredients = ingredientsTotal, ingredientsCorrect = ingrCorrect)
+    return jsonify(ingredients = ingredientsTotal, ingredientsCorrect = ingrCorrect, length=length)
 @app.route('/quiz/<quiznum>/<id>')
 def quiz(id, quiznum):
     temp = int(id)
