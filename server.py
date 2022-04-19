@@ -266,7 +266,7 @@ def learn(id, kind, page):
     for i in steps:
         if i["id"]==str(int(page)-1):
             step=i
-    return(render_template(template, materials=materials, tools=tools, step=step, page=page))
+    return(render_template(template, materials=materials, tools=tools, step=step, page=page, id=id))
 
 
 @app.route('/quiz/<id>')
