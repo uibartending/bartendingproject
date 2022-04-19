@@ -37,10 +37,10 @@
   </div> 
   
   <div class="col-md-2">
-    {% for ingredients.img in data.ingredients.img %} <!--loop through the ingredient images--> 
+    {% for ingredients in data %} <!--loop through the ingredient images--> 
       <div class="row"> <!--create a new row-->
         <div>Ingredient of id1</div> <!-- delete this text later --> 
-        <div>{{data.ingredients.img}}</div>
+        <div>{{data[id].ingredients.img}}</div>
       </div>
     {% endfor %}
   </div>
