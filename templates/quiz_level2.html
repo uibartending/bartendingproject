@@ -44,11 +44,10 @@
   <div class="col-md-10">
     {% for ingredients in data[id].ingredients %} <!--loop through the ingredient images--> 
         <div class="row">    
-        <div class = "col-md-2">{{ingredients.name}}</div>
-        <div class = "col-md-4"><img src= {{ingredients.img}}></div>
-        <div class = "col-md-2"> <input type="text" id="inputText"> </div>
-         <div class = "col-md-2"> <p><i class="arrow up"></i></p>
-        <p><i class="arrow down"></i></p> </div>
+          <div class = "col-md-2">{{ingredients.name}}</div>
+          <div class = "col-md-4"><img src= {{ingredients.img}}></div>
+          <div class = "col-md-2"> <input type="text" id="inputText"> </div>
+          <div class = "col-md-2"> <p><i class="arrow up"></i></p> <p><i class="arrow down"></i></p> </div>
     {% endfor %}
   </div>
 
