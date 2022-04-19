@@ -17,21 +17,29 @@ data = [
             {
                 "id":"0",
                 "name":"ice",
+                "amt":"1",
+                "unit":"oz",
                 "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
             },
             {
                 "id":"1",
                 "name":"tequila",
+                 "amt":"2",
+                "unit":"oz",
                 "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
             },
             {
                 "id":"2",
                 "name":"lime juice",
+                 "amt":"1",
+                "unit":"oz",
                 "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
             },
             {
                 "id":"3",
                 "name":"cointreau",
+                "amt":"1",
+                "unit":"oz",
                 "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
             },
         ],
@@ -78,31 +86,43 @@ data = [
            {
                "id":"0",
                "name":"Ice",
+                "amt":"1",
+                "unit":"oz",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
            {
                "id":"1",
-               "name":"Tequila",
+               "name":"vodka",
+                  "amt":"2",
+                "unit":"oz",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
            {
                "id":"2",
                "name":"Triple sec",
+                  "amt":".5",
+                "unit":"oz",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
            {
                "id":"3",
                "name":"Cranberry juice",
+                  "amt":"1",
+                "unit":"tsp",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
            {
                "id":"4",
                "name":"Lime juice",
+                  "amt":"1",
+                "unit":"tsp",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
            {
                "id":"5",
                "name":"Orange peel",
+                  "amt":"1",
+                "unit":"peel",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            }
        ],
@@ -160,36 +180,50 @@ data = [
            {
                "id":"0",
                "name":"Ice",
+               "amt":"1",
+               "unit":"oz",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
            {
                "id":"1",
                "name":"Light rum",
+               "amt":"2",
+               "unit":"oz",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
            {
                "id":"2",
                "name":"Coconut cream",
+               "amt":"5",
+               "unit":"tsp",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
            {
                "id":"3",
                "name":"Pineapple juice",
+               "amt":"5",
+               "unit":"tsp",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
            {
                "id":"4",
                "name":"Lime juice",
+               "amt":".5",
+               "unit":"oz",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
            {
                "id":"5",
                "name":"Pineapple wedge",
+               "amt":"1",
+               "unit":"wedge",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            },
            {
                "id":"6",
                "name":"Pineapple leaf",
+               "amt":"1",
+               "unit":"leaf",
                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"
            }
        ],
