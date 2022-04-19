@@ -13,8 +13,27 @@ var ingredients = [
     "Kevin",
     "Kelly"
 ]
-function initDat(){
-    
+var ingredientsCorrect = [
+]
+function getclient(){
+
+    $.ajax({
+        type: "GET",
+        url: window.location.origin+"/ingredients",
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        success: function(result){
+            ingredients  = result["ingredients"]
+            ingredientsCorrect  = result["ingredientsCorrect"]
+            console.log(ingredients)
+        },
+        error: function(request, status, error){
+            console.log("Error");
+            console.log(request)
+            console.log(status)
+            console.log(error)
+        }
+    });
 }
 function makenames(ingredients, ppc_members){
     $("#ppc").empty()
@@ -38,6 +57,7 @@ function makenames(ingredients, ppc_members){
 }
 
 $(document).ready(function(){
+    getclient()
     makenames(ingredients, ppc_members)
     $("#ppc_drop").droppable({
         drop: function(event, ui){
