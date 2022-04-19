@@ -4,10 +4,14 @@
 {% block content %}
 
 <script>
-    let steps = {{steps|tojson}} 
-    console.log(steps)
+    let step = {{step|tojson}} 
+    console.log(step)
     let page = {{page|tojson}} 
     console.log(page)
+    let materials = {{materials|tojson}} 
+    console.log(materials)
+    let tools = {{tools|tojson}} 
+    console.log(tools)
 </script>
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'learn_steps.js') }}"></script>
@@ -17,8 +21,12 @@
         <div class='col-md-6'>
             <div id='instruction'></div>
         </div>
+        <div class='row'>
+             <div id='ing_images'></div>
+             <div id='tool_images'></div>
+        </div>
         <div class='col-md-6'>
-            <div id='visuals'></div>
+             <div id='visuals'></div>
         </div>
     </div>
     <div class='row'>
