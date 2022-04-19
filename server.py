@@ -271,17 +271,7 @@ def learn(id, kind, page):
 
 @app.route('/quiz/<id>')
 def quiz(id):
-
-    global quiz
-    global learning_status
-    global basic_material0
-    global quiz_answers
-
-    id = int(id)
-
-
-
-    return render_template('quiz.html', status=learning_status, quiz_index=id, data=basic_material0, answer=quiz_answers[id])
+    return render_template('quiz_level2.html', id=id)
 
 
 
