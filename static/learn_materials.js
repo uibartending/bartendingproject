@@ -16,6 +16,8 @@ function display_materials(materials, tools, page){
             $("#materials").append(to_add)
         })
         /*add next button*/
+        let nextbutton = '<button class="next">Next</button>'
+        $('#nextbutton').append(nextbutton)
     } 
     /*if page is 2, put materials images and text into a column*/
     else{
@@ -33,9 +35,39 @@ function display_materials(materials, tools, page){
             $("#materials").append(to_add)
         })
         /*add a next button and a back button*/
+        let nextbutton = '<button class="next">Next</button>'
+        $('#nextbutton').append(nextbutton)
+        let backbutton = '<button class="back">Back</button>'
+        $('#backbutton').append(backbutton)
     }
+}
+
+function next(page, id){
+    let pagenum = page
+    if(pagenum<2){
+        let nextpage = parseInt(page)
+        nextpage = nextpage+1
+        window.location.href="/learn/"+id+"/materials/"+nextpage
+    }
+    else{
+        window.location.href="/learn/"+id+"/steps/1"
+    }
+    
+}
+function back(page){
+    let prevpage = parseInt(page)
+    prevpage = prevpage-1
+    window.location.href="/learn/"+id+"/materials/"+prevpage
 }
 
 $(document).ready(function(){
     display_materials(materials, tools, page)
+    
+    $(".next").click(function(){
+        next(page, id)
+    })
+
+    $(".back").click(function(){
+        back(page)
+    })
 })
