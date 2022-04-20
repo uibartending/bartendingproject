@@ -3,8 +3,10 @@
 {% block content %}
 
 <script>
-    let data = {{data|tojson}} 
+    let data = {{data|tojson}}
+    let user_data = {{user_data|tojson}}
     console.log(data)
+    console.log(user_data)
 </script>
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
