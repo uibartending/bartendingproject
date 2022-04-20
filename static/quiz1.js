@@ -78,7 +78,9 @@ $(document).ready(function(){
     $("#doneButton").click(function() {
         nextquiz = parseInt(subStringQuiz())+1
         drink = getRandomInt(length-1)
-        if(nextquiz > (length)) {
+        console.log(nextquiz)
+        console.log(length)
+        if(nextquiz > (parseInt(length))) {
             location.href = '/'
         }
         else {
