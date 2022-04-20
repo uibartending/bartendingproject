@@ -316,6 +316,9 @@ def posterrors():
 def main():
     return render_template('home.html', data=data)
 
+@app.route('/end')
+def end():
+       return render_template('endpage.html')
 
 @app.route('/learn/<id>/<kind>/<page>')
 def learn(id, kind, page):
@@ -341,7 +344,6 @@ def quiz(id, quiznum):
     global data 
        
     return render_template(template, data=data, id=temp)
-
 
 
 if __name__ == '__main__':
