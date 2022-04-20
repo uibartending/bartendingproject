@@ -67,7 +67,7 @@ function postVa(){
         }
     });
 }
-function checkQuiz2 (){
+function checkQuiz2(){
     dr = drink["ingredients"]
     for (id in drink["ingredients"]){
         seel = "#"+id
@@ -79,22 +79,24 @@ function checkQuiz2 (){
         }
         else{
             errors.push({"id" : id, "val":val})
+            $(seel).val("Incorrect")
             console.log(errors)
         }
     }
-
+    postQuiz2()
 }
-function postQuiz2 (){
-    let data_to_save = JSON.stringify({"errors":errors, "user": "ChiltonL"})
+function postQuiz2(){
+    let data_to_save = JSON.stringify({"errors" : errors, "user" : "ChiltonL"})
+    console.log(data_to_save)
     $.ajax({
         type: "POST",
-        url: window.location.origin+"/postErrors",
+        url: window.location.origin+"/posterrors",
         dataType : "json",
         contentType: "application/json; charset=utf-8",
         data : data_to_save,
         success: function(result){
             console.log(result)
-            doneButton();
+            errors = []
         },
         error: function(request, status, error){
             console.log("Error");
@@ -152,7 +154,7 @@ $(document).ready(function(){
         checkQuiz2()
     });
     $("#doneButton").click(function() {
-
+        doneButton()
          //might have to change the path
     });
     $("#ppc_drop").droppable({
