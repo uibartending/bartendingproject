@@ -74,7 +74,9 @@ function getRandomInt(max) {
 }
 $(document).ready(function(){
     getclient()
-
+    $("#exitButton").click(function() {
+        location.href = '/'
+    });
     $("#doneButton").click(function() {
         nextquiz = parseInt(subStringQuiz())+1
         drink = getRandomInt(length-1)
