@@ -290,11 +290,15 @@ data = [
 },
 ]
 userErrors={}
+user_data = {"loginTime": ""}
+
 quiz = [
 
 ]
 ingredientsTotal=[
+       
  ]
+
 @app.route('/ingredients', methods=['GET', 'POST'])
 def getname():
     global data
@@ -324,9 +328,9 @@ def posterrors():
         userErrors[user] = er + userErrors[user]
     return jsonify(res = "YES")
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def main():
-    return render_template('home.html', data=data)
+    return render_template('home.html', data=data, user_data=user_data)
 
 
 @app.route('/learn/<id>/<kind>/<page>')
