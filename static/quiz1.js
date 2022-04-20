@@ -89,7 +89,7 @@ function doneButton (){
     console.log(nextquiz)
     console.log(length)
     if(nextquiz > (parseInt(length))) {
-        location.href = '/'
+        location.href = '/end'
     }
     else {
         location.href = '/quiz/' + nextquiz+"/" +drink
