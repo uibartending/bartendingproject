@@ -13,10 +13,37 @@ var ingredients = [
     "Kevin",
     "Kelly"
 ]
+var drink = {}
 var ingredientsCorrect = [
 ]
+var errors = []
 var id = 1
 function getclient(){
+    let data_to_save = JSON.stringify({"id":id})
+    $.ajax({
+        type: "POST",
+        url: window.location.origin+"/ingredients",
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        data : data_to_save,
+        success: function(result){
+            ingredients  = result["ingredients"]
+            ingredientsCorrect  = result["ingredientsCorrect"]
+            length = result["length"]
+            drink = result["drink"]
+            console.log(ingredients)
+            console.log(drink)
+            makenames(ingredients, ppc_members)
+        },
+        error: function(request, status, error){
+            console.log("Error");
+            console.log(request)
+            console.log(status)
+            console.log(error)
+        }
+    });
+}
+function postVa(){
     let data_to_save = JSON.stringify({"id":id})
     $.ajax({
         type: "POST",
@@ -40,8 +67,55 @@ function getclient(){
         }
     });
 }
+function checkQuiz2 (){
+    dr = drink["ingredients"]
+    for (id in drink["ingredients"]){
+        seel = "#"+id
+        val = $(seel).val()
 
+        drid = drink["ingredients"][id]["amt"]
+        if (val  ==  drid){
+            console.log("Right")
+        }
+        else{
+            errors.push({"id" : id, "val":val})
+            console.log(errors)
+        }
+    }
 
+}
+function postQuiz2 (){
+    let data_to_save = JSON.stringify({"errors":errors, "user": "ChiltonL"})
+    $.ajax({
+        type: "POST",
+        url: window.location.origin+"/postErrors",
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        data : data_to_save,
+        success: function(result){
+            console.log(result)
+            doneButton();
+        },
+        error: function(request, status, error){
+            console.log("Error");
+            console.log(request)
+            console.log(status)
+            console.log(error)
+        }
+    });
+}
+function doneButton (){
+    nextquiz = parseInt(subStringQuiz())+1
+    drink = getRandomInt(length-1)
+    console.log(nextquiz)
+    console.log(length)
+    if(nextquiz > (parseInt(length))) {
+        location.href = '/'
+    }
+    else {
+        location.href = '/quiz/' + nextquiz+"/" +drink
+    }
+}
 function makenames(ingredients, ppc_members){
     $("#ppc").empty()
     $("#non_ppc").empty()
@@ -74,20 +148,11 @@ function getRandomInt(max) {
 }
 $(document).ready(function(){
     getclient()
-    $("#exitButton").click(function() {
-        location.href = '/'
+    $("#checkButton").click(function() {
+        checkQuiz2()
     });
     $("#doneButton").click(function() {
-        nextquiz = parseInt(subStringQuiz())+1
-        drink = getRandomInt(length-1)
-        console.log(nextquiz)
-        console.log(length)
-        if(nextquiz > (parseInt(length))) {
-            location.href = '/'
-        }
-        else {
-            location.href = '/quiz/' + nextquiz+"/" +drink
-        }
+
          //might have to change the path
     });
     $("#ppc_drop").droppable({
