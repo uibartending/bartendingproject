@@ -16,16 +16,25 @@
 </script>
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'learn_steps.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename = 'learn_steps.css') }}">
 
 <div class='container'>
     <div class='row padded'>
         <div class='col-md-6'>
             <div id='instruction'></div>
+            <div class='row padded'>
+              <div class='col-md-6'>
+                   <p>Ingredients needed: </p>
+                   <div id='ing_images'></div>
+              </div>
+              <div class='col-md-6'>
+                    <p>Tools needed: </p>
+                    <div id='tool_images'></div>
+              </div>
+            </div>
         </div>
-        <div class='row'>
-             <div id='ing_images'></div>
-             <div id='tool_images'></div>
-        </div>
+
+
         <div class='col-md-6'>
              <div id='visuals'></div>
         </div>
@@ -35,7 +44,7 @@
         <div class='col-md-9'> </div>
         <div class='col-md-3' id='nextbutton'> </div>
     </div>
-    
+
 </div>
 
 {% endblock %}
