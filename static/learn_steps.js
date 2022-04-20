@@ -45,7 +45,7 @@ function next(page, id){
     }
     else{
         if(id==2){
-            window.location.href="/quiz/0"
+            window.location.href="/quiz/1/0"
         }
         else{
             let nextid = parseInt(id)
