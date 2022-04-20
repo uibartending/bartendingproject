@@ -1,4 +1,4 @@
-
+var length=0
 let ppc_members=[]
 var ingredients = [
     "Phyllis",
@@ -27,7 +27,9 @@ function getclient(){
         success: function(result){
             ingredients  = result["ingredients"]
             ingredientsCorrect  = result["ingredientsCorrect"]
+            length = result["length"]
             console.log(ingredients)
+            console.log(result)
             makenames(ingredients, ppc_members)
         },
         error: function(request, status, error){
@@ -38,6 +40,8 @@ function getclient(){
         }
     });
 }
+
+
 function makenames(ingredients, ppc_members){
     $("#ppc").empty()
     $("#non_ppc").empty()
@@ -58,10 +62,30 @@ function makenames(ingredients, ppc_members){
         $("#non_ppc").append(employee)
     })
 }
-
+function subStringQuiz() {
+    indx = window.location.href.lastIndexOf('quiz/')
+    temp =window.location.href.substring(indx+5,indx+6)
+    return (temp);
+}
+function getRandomInt(max) {
+    temp = Math.round(Math.random()*max)
+    console.log(temp)
+    return (temp);
+}
 $(document).ready(function(){
     getclient()
 
+    $("#doneButton").click(function() {
+        nextquiz = parseInt(subStringQuiz())+1
+        drink = getRandomInt(length-1)
+        if(nextquiz > (length)) {
+            location.href = '/'
+        }
+        else {
+            location.href = '/quiz/' + nextquiz+"/" +drink
+        }
+         //might have to change the path
+    });
     $("#ppc_drop").droppable({
         drop: function(event, ui){
             console.log(ui.draggable.data("name"))
