@@ -3,6 +3,23 @@
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz1.js') }}"></script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<style> 
+  .arrow{
+    border: solid black; 
+    border-width: 0 3px 3px 0; 
+    display: inline-block; 
+    padding: 3px; 
+  }
+  
+  .up{
+    transform: rotate(-135deg); 
+    -webkit-transform: rotate(-135deg);
+  }
+  .down{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+</style> 
 
 <body>
 <div class="container"> 
@@ -21,29 +38,26 @@
       <div>Adjust the amount of each ingredient to make the perfect drink!</div>
     </div>
   </div> 
-
-  
+      
 
   <div class="col-md-10">
       <div class="container-buffer">
     <div class="row">   
     {% for ingredients in data[id].ingredients %} <!--loop through the ingredient images-->
-        <div class = "col-md-4"><img src= {{ingredients.img}} height="120px"></div>
-        <div class = "col-md-2">{{ingredients.name}}</div>
-        <div class = "col-md-2"> <input type="text" id="inputText"> </div>
-
+        <div class = "col-md-4"><img src= {{ingredients.img}}></div>
+        <div class = "col-md-1">{{ingredients.name}}</div>
+        <div class = "col-md-4"> <input type="text" id={{ingredients.id}}> </div>
     {% endfor %}
     </div>
       </div>
   </div>
-
+      <button type="button" id="checkButton">Check</button>
   
   </div>
   <div>
     <button type="button" id="doneButton">Done</button>
   </div>
-  
-
+    
 </div>
 </body> 
 
