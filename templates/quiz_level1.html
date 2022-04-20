@@ -7,14 +7,6 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz1.js') }}"></script>
-
-<script>
-    $("#DoneButton1").click(function(){
-        location.href= '/quiz/' + '/quiznum/' + id 
-    }); 
-    
-</script>
-
 <style>
     .header{
         background-color: lightgrey;
@@ -100,12 +92,8 @@
             <div id="non_ppc">Test</div>
         </div>
 
-<div class="row">
-  <div class="col-md-10">
-    </div>
-  <div class="col-md-2">
-    <button type="button" id="DoneButton1">Done</button>
-  </div>
+
+
 
         TODO: PUT THE APPROPRIATE ID'S SO WE KNOW DRAG AND DROP ZONE
          -->
@@ -125,6 +113,7 @@
 </div> -->
     </div>
 </div>
+<button type="button" id="doneButton">Done</button>
 </body>
 </html>
 
