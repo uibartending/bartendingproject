@@ -18,31 +18,7 @@ var ingredientsCorrect = [
 ]
 var errors = []
 var id = 1
-function getclient(){
-    let data_to_save = JSON.stringify({"id":id})
-    $.ajax({
-        type: "POST",
-        url: window.location.origin+"/ingredients",
-        dataType : "json",
-        contentType: "application/json; charset=utf-8",
-        data : data_to_save,
-        success: function(result){
-            ingredients  = result["ingredients"]
-            ingredientsCorrect  = result["ingredientsCorrect"]
-            length = result["length"]
-            drink = result["drink"]
-            console.log(ingredients)
-            console.log(drink)
-            makenames(ingredients, ppc_members)
-        },
-        error: function(request, status, error){
-            console.log("Error");
-            console.log(request)
-            console.log(status)
-            console.log(error)
-        }
-    });
-}
+
 function postVa(){
     let data_to_save = JSON.stringify({"id":id})
     $.ajax({
@@ -58,6 +34,27 @@ function postVa(){
             console.log(ingredients)
             console.log(result)
             makenames(ingredients, ppc_members)
+        },
+        error: function(request, status, error){
+            console.log("Error");
+            console.log(request)
+            console.log(status)
+            console.log(error)
+        }
+    });
+}
+function postQuiz2(){
+    let data_to_save = JSON.stringify({"errors" : errors, "user" : "ChiltonL"})
+    console.log(data_to_save)
+    $.ajax({
+        type: "POST",
+        url: window.location.origin+"/posterrors",
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        data : data_to_save,
+        success: function(result){
+            console.log(result)
+            errors = []
         },
         error: function(request, status, error){
             console.log("Error");
@@ -85,27 +82,7 @@ function checkQuiz2(){
     }
     postQuiz2()
 }
-function postQuiz2(){
-    let data_to_save = JSON.stringify({"errors" : errors, "user" : "ChiltonL"})
-    console.log(data_to_save)
-    $.ajax({
-        type: "POST",
-        url: window.location.origin+"/posterrors",
-        dataType : "json",
-        contentType: "application/json; charset=utf-8",
-        data : data_to_save,
-        success: function(result){
-            console.log(result)
-            errors = []
-        },
-        error: function(request, status, error){
-            console.log("Error");
-            console.log(request)
-            console.log(status)
-            console.log(error)
-        }
-    });
-}
+
 function doneButton (){
     nextquiz = parseInt(subStringQuiz())+1
     drink = getRandomInt(length-1)
@@ -149,7 +126,7 @@ function getRandomInt(max) {
     return (temp);
 }
 $(document).ready(function(){
-    getclient()
+    postVa()
     $("#checkButton").click(function() {
         checkQuiz2()
     });
