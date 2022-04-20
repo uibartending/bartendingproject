@@ -20,28 +20,28 @@ data = [
                 "name":"ice",
                 "amt":"1",
                 "unit":"oz",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+                "img":"https://media.istockphoto.com/photos/ice-cubes-picture-id177131518?k=20&m=177131518&s=612x612&w=0&h=Bym7fbnY-eOI0CvFJhPJv_B4uLhTjul4ThN05p_Eao0=",
             },
             {
                 "id":"1",
                 "name":"tequila",
                  "amt":"2",
                 "unit":"oz",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+                "img":"https://www.patrontequila.com/binaries/mediumretina/content/gallery/patrontequila/products/patron-silver/bottle.png",
             },
             {
                 "id":"2",
                 "name":"lime juice",
                  "amt":"1",
                 "unit":"oz",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+                "img":"https://images.absolutdrinks.com/ingredient-images/Raw/Absolut/c9b31b0d-ed32-4125-b0e0-430e861d015f.jpg?imwidth=500",
             },
             {
                 "id":"3",
                 "name":"cointreau",
                 "amt":"1",
                 "unit":"oz",
-                "img":"https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+                "img":"https://cdn.shopify.com/s/files/1/1569/9643/products/cointreau-triple-sec-orange-liqueur_1200x1200.jpg?v=1588276743",
             },
         ],
         "tools":[
@@ -277,12 +277,40 @@ data = [
        ]
 },
 ]
-
+userErrors={}
 quiz = [
 
 ]
 ingredientsTotal=[
  ]
+@app.route('/ingredients', methods=['GET', 'POST'])
+def getname():
+    global data
+    global ingredientsTotal
+    json_data = request.get_json() 
+    idnum = json_data["id"]
+    ingrCorrect = [] 
+    ingobj = data[idnum]["ingredients"]
+    for ing in data[idnum]["ingredients"]:
+        ingrCorrect.append(ing["name"])
+    for  drink in data:
+        for  ing in drink["ingredients"]:
+            if ing["name"] not in ingredientsTotal:
+                ingredientsTotal.append(ing["name"])
+    length = len(data)
+    return jsonify(ingredients = ingredientsTotal, ingredientsCorrect = ingrCorrect, drink = data[idnum],  length=length)
+
+@app.route('/posterrors', methods=['GET', 'POST'])
+def posterrors():
+    global userErrors
+    global data
+    global ingredientsTotal
+    json_data = request.get_json()
+    er = json_data["errors"]
+    user = json_data["user"]
+    if not userErrors[user] :
+        userErrors[user] = er + userErrors[user]      
+    return jsonify(res = "YES")
 
 @app.route('/')
 def main():
@@ -305,23 +333,7 @@ def learn(id, kind, page):
             step=i
     return(render_template(template, materials=materials, tools=tools, step=step, page=page, id=id))
 
-@app.route('/ingredients', methods=['GET', 'POST'])
-def getname():
-    global data
-    global ingredientsTotal
-    json_data = request.get_json() 
-    idnum = json_data["id"]
-    ingrCorrect = [] 
-    
-    for ing in data[idnum]["ingredients"]:
-        ingrCorrect.append(ing["name"])
-    for  drink in data:
-        for  ing in drink["ingredients"]:
-            if ing["name"] not in ingredientsTotal:
-                ingredientsTotal.append(ing["name"])
-    length = len(data)
-    #send back the WHOLE array of data, so the client can redisplay it
-    return jsonify(ingredients = ingredientsTotal, ingredientsCorrect = ingrCorrect, length=length)
+
 @app.route('/quiz/<quiznum>/<id>')
 def quiz(id, quiznum):
     temp = int(id)
