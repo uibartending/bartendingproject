@@ -12,7 +12,7 @@ function display_materials(materials, tools, page){
         $.each(materials, function(index, value){
             let img=value["img"]
             let title=value["name"]
-            let to_add="<div class='col-md-"+colsize+"'><img src='"+img+"' alt='"+title+"' class='img img-fluid img-size'><br>"+title+"</div>"
+            let to_add="<div class='item-style col-md-"+colsize+"'><img src='"+img+"' alt='"+title+"' class='img img-fluid img-size'><br>"+title+"</div>"
             $("#materials").append(to_add)
         })
         /*add next button*/
@@ -30,7 +30,7 @@ function display_materials(materials, tools, page){
         $.each(tools, function(index, value){
             let img=value["img"]
             let title=value["name"]
-            let to_add="<div class='col-md-"+colsize+"'><img src='"+img+"' alt='"+title+"' class='img img-fluid img-size'><br>"+title+"</div>"
+            let to_add="<div class='item-style col-md-"+colsize+"'><img src='"+img+"' alt='"+title+"' class='img img-fluid img-size'><br>"+title+"</div>"
             console.log(to_add)
             $("#materials").append(to_add)
         })
