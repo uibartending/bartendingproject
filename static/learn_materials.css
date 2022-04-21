@@ -2,3 +2,7 @@
   width: 100px;
   height: 100px;
 }
+
+.item-style {
+  border: 1px solid black;
+}
