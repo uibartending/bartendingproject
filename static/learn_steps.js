@@ -29,9 +29,9 @@ function display_step(step, page, materials, tools){
         let to_append="<div class='col'><img src='"+value+"' alt='"+alt+"' class='img img-fluid'></img></div>"
         $("#visuals").append(to_append)
     })
-    let nextbutton = '<button class="next">Next</button>'
+    let nextbutton = '<button class="next large-top-margin">Next</button>'
     $('#nextbutton').append(nextbutton)
-    let backbutton = '<button class="back">Back</button>'
+    let backbutton = '<button class="back large-top-margin">Back</button>'
     $('#backbutton').append(backbutton)
 }
 
