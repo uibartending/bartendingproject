@@ -16,7 +16,7 @@ function display_materials(materials, tools, page){
             $("#materials").append(to_add)
         })
         /*add next button*/
-        let nextbutton = '<button class="next">Next</button>'
+        let nextbutton = '<button class="next large-top-margin">Next</button>'
         $('#nextbutton').append(nextbutton)
     } 
     /*if page is 2, put materials images and text into a column*/
@@ -35,9 +35,9 @@ function display_materials(materials, tools, page){
             $("#materials").append(to_add)
         })
         /*add a next button and a back button*/
-        let nextbutton = '<button class="next">Next</button>'
+        let nextbutton = '<button class="next large-top-margin">Next</button>'
         $('#nextbutton').append(nextbutton)
-        let backbutton = '<button class="back">Back</button>'
+        let backbutton = '<button class="back large-top-margin">Back</button>'
         $('#backbutton').append(backbutton)
     }
 }
