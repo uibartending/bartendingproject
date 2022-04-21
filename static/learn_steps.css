@@ -6,3 +6,8 @@
 .large-top-margin {
   margin-top: 80px;
 }
+
+.item-style {
+  border: 1px solid black;
+  text-align: center;
+}
