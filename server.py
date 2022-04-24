@@ -71,24 +71,24 @@ data = [
         "steps":[
             {
                 "id":"0",
-                "text":"Squeeze 1 oz. of lime juice<br>Measure out 1 oz. Cointreau<br>Measure out 2 oz. Tequila ",
+                "text":"Squeeze 1 oz. of lime juice<br>Measure out 1 oz. Cointreau<br>Measure out 2 oz. Tequila",
                 "tools":["glass", "Measurements", "Shaker"],
                 "ingredients":["Cointreau", "Lime Juice", "Tequila"],
-                "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
+                "img":["https://www.homemadefoodjunkie.com/wp-content/uploads/2020/06/measuring-1800-tequila.jpg"]
             },
             {
                 "id":"1",
                 "text":"Combine ingredients into shaker<br>Shake well to combine",
                 "tools":["shaker"],
                 "ingredients":[""],
-                "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
+                "img":["https://www.thespruceeats.com/thmb/IzZLkkRDki_A5OiTSecDbNnsgZY=/940x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-859603292-5a79ec08a9d4f90036247b1c.jpg"]
             },
             {
                 "id":"2",
                 "text":"Optional: Salt rims of margarita glass <br>Optional: Slice lime wedges to put on side<br>Pour drink into margarita glass + enjoy!",
                 "tools":["Margarita Glass"],
                 "ingredients":["Salt", "Fresh Lime"],
-                "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
+                "img":["https://bakingamoment.com/wp-content/uploads/2019/04/IMG_4056-margarita-ingredients.jpg"]
             },
         ],
     },
@@ -168,14 +168,14 @@ data = [
                "text":"Take 1 teaspoon of lime juice. <br> Take 1 teaspoon of cranberry juice. <br> Measure out 2 oz. vodka. <br> Measure out 1/2 oz. triple sec.",
                "tools":["teaspoon", "measurements", "martini glass"],
                "ingredients":["lime juice", "cranberry juice", "vodka", "triple sec"],
-               "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
+               "img":["https://www.homemadefoodjunkie.com/wp-content/uploads/2020/06/measuring-1800-tequila.jpg"]
            },
            {
                "id":"1",
                "text":"Combine ingredients into shaker. <br> Shake well to combine.",
                "tools":["shaker"],
                "ingredients":[""],
-               "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
+               "img":["https://www.thespruceeats.com/thmb/IzZLkkRDki_A5OiTSecDbNnsgZY=/940x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-859603292-5a79ec08a9d4f90036247b1c.jpg"]
            },
            {
                "id":"2",
@@ -222,20 +222,13 @@ data = [
            },
            {
                "id":"4",
-               "name":"Lime juice",
-               "amt":".5",
-               "unit":"oz",
-               "img":"https://www.thespruceeats.com/thmb/KIDItEQSR7SYGeYR5k9ExRJFpjE=/1333x1000/smart/filters:no_upscale()/thai-limeade-recipe-3217359-hero-02-91dbbaac0ec349e4b8f640aee05d18d1.jpg"
-           },
-           {
-               "id":"5",
                "name":"Pineapple wedge",
                "amt":"1",
                "unit":"wedge",
                "img":"https://media01.stockfood.com/largepreviews/Mjg1OTUxNDQ=/00922424-Wedge-of-pineapple.jpg"
            },
            {
-               "id":"6",
+               "id":"5",
                "name":"Pineapple leaf",
                "amt":"1",
                "unit":"leaf",
@@ -267,17 +260,17 @@ data = [
        "steps":[
            {
                "id":"0",
-               "text":"Take 5 teaspoons of coconut cream.<br> Take 5 teaspoons of pineapple juice.<br> Measure out 2 oz. light rum.<br> Measure out 1/2 oz. lime juice.",
+               "text":"Take 5 teaspoons of coconut cream.<br> Take 5 teaspoons of pineapple juice.<br> Measure out 2 oz. light rum.",
                "tools":["teaspoon", "measurements", "martini glass"],
-               "ingredients":["coconut cream", "pineapple juice", "light rum", "lime juice"],
-               "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
+               "ingredients":["coconut cream", "pineapple juice", "light rum"],
+               "img":["https://www.homemadefoodjunkie.com/wp-content/uploads/2020/06/measuring-1800-tequila.jpg"]
            },
            {
                "id":"1",
                "text":"Combine ingredients into shaker.<br> Shake vigorously to combine.",
                "tools":["shaker"],
                "ingredients":[""],
-               "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
+               "img":["https://www.thespruceeats.com/thmb/IzZLkkRDki_A5OiTSecDbNnsgZY=/940x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-859603292-5a79ec08a9d4f90036247b1c.jpg"]
            },
            {
                "id":"2",
@@ -296,7 +289,7 @@ quiz = [
 
 ]
 ingredientsTotal=[
-       
+
  ]
 
 @app.route('/ingredients', methods=['GET', 'POST'])
@@ -362,4 +355,3 @@ def quiz(id, quiznum):
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', debug=True)
-
