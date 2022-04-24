@@ -182,7 +182,7 @@ data = [
                "text":"Optional: Garnish with orange peel. <br> Optional: Peel the orange twist over the filled cocktail glass. <br> Pour drink into martini glass + enjoy!",
                "tools":["martini glass"],
                "ingredients":["orange peel"],
-               "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
+               "img":["https://www.jocooks.com/wp-content/uploads/2020/03/cosmopolitan-cocktail-1-3.jpg"]
            },
        ]
     },
@@ -277,7 +277,7 @@ data = [
                "text":"Optional: Garnish with a pineapple leaf.<br> Optional: Garnish with a pineapple wedge.<br> Pour drink into martini glass + enjoy!",
                "tools":["martini glass"],
                "ingredients":["pineapple leaf", "pineapple wedge"],
-               "img":["https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png"]
+               "img":["https://farm2.staticflickr.com/1829/29461128088_45fcc94bb4_o.jpg"]
            },
        ]
 },
