@@ -26,7 +26,7 @@ function display_step(step, page, materials, tools){
     /* put in next column visuals */
     $.each(step["img"], function(index, value){
         let alt="filler"
-        let to_append="<div class='col'><img src='"+value+"' alt='"+alt+"' class='img img-fluid'></img></div>"
+        let to_append="<div class='col'><img src='"+value+"' alt='"+alt+"' class='img img-fluid visuals-img-size'></img></div>"
         $("#visuals").append(to_append)
     })
     let nextbutton = '<button class="next large-top-margin">Next</button>'
@@ -52,7 +52,7 @@ function next(page, id){
             window.location.href="/learn/"+nextid+"/materials/1"
         }
     }
-    
+
 }
 function back(page, id){
     if(page==1){
@@ -63,12 +63,12 @@ function back(page, id){
         prevpage = prevpage-1
         window.location.href="/learn/"+id+"/steps/"+prevpage
     }
-    
+
 }
 
 $(document).ready(function(){
     display_step(step, page, materials, tools)
-    
+
     $(".next").click(function(){
         next(page, id)
     })
