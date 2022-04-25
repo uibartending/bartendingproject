@@ -11,9 +11,23 @@ function get_entry_time(user_data) {
   var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
   var dateTime = date+' '+time;
-  console.log(dateTime);
-  user_data["loginTime"] = dateTime
-  console.log(user_data)
+  let data_to_save = JSON.stringify({"entry time" : dateTime, "user" : "ChiltonL"})
+  $.ajax({
+    type: "POST",
+    url: window.location.origin+"/posttime",
+    dataType : "json",
+    contentType: "application/json; charset=utf-8",
+    data : data_to_save,
+    success: function(result){
+        console.log(result)
+    },
+    error: function(request, status, error){
+        console.log("Error");
+        console.log(request)
+        console.log(status)
+        console.log(error)
+    }
+});
 }
 
 function startlearn(){
