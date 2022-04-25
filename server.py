@@ -317,8 +317,10 @@ def posterrors():
     json_data = request.get_json()
     er = json_data["errors"]
     user = json_data["user"]
-    if not userErrors[user] :
-        userErrors[user] = er + userErrors[user]
+    if not user in userErrors:
+        userErrors[user] = er
+    else:
+        userErrors[user] = userErrors[user]+er
     return jsonify(res = "YES")
 
 @app.route('/', methods=['GET', 'POST'])
