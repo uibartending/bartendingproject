@@ -283,7 +283,7 @@ data = [
 },
 ]
 userErrors={}
-user_data = {"loginTime": ""}
+user_data = {}
 
 quiz = [
 
@@ -322,6 +322,17 @@ def posterrors():
     else:
         userErrors[user] = userErrors[user]+er
     return jsonify(res = "YES")
+
+@app.route('/posttime', methods=['GET', 'POST'])
+def posttime():
+    json_data = request.get_json()
+    time = json_data["entry time"]
+    user = json_data["user"]
+    if not user in user_data:
+        user_data[user] = [time]
+    else:
+        user_data[user].append(time)
+    return jsonify(user_data=user_data)
 
 @app.route('/', methods=['GET', 'POST'])
 def main():
