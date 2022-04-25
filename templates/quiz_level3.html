@@ -11,9 +11,8 @@
 </div>
   <div class="row">
 
-<div class="col-md-3">
+<div class="col-md-4">
   <div>
-
     <img src = {{data[id].img}}>
   </div>
   <div >
@@ -25,7 +24,7 @@
     <div>Fill in the blanks to make the perfect drink!</div>
   </div>
 </div>
-<div class="col-md-9">
+<div class="col-md-8">
 
   {% for ingredient in data[id].ingredients %} <!--loop through each ingredient-->
   <div class="row"> <!--create a new row-->
@@ -44,16 +43,16 @@
 </div>
 </div>
 
-
-
 <div class="row">
-  <div class="col-md-10">
+    <div class="col-md-2">
+        <button type="button" id="checkButton">Check</button>
     </div>
-  <div class="col-md-2">
-    <button type="button" id="doneButton">Done</button>
-  </div>
-
+    <div class="col-md-8"></div>
+    <div class="col-md-2">
+        <button type="button" id="doneButton">Done</button>
+    </div>
 </div>
+
 </div>
 </div>
 
