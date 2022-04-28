@@ -99,7 +99,7 @@ data = [
        "ingredients":[
            {
                "id":"0",
-               "name":"Ice",
+               "name":"ice",
                 "amt":"1",
                 "unit":"oz",
                "img":"https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/10/15/0/fnd_Ice-Cubes-thinkstock.jpg.rend.hgtvcom.616.462.suffix/1413404558868.jpeg"
@@ -194,7 +194,7 @@ data = [
        "ingredients":[
            {
                "id":"0",
-               "name":"Ice",
+               "name":"ice",
                "amt":"1",
                "unit":"oz",
                "img":"https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/10/15/0/fnd_Ice-Cubes-thinkstock.jpg.rend.hgtvcom.616.462.suffix/1413404558868.jpeg"
