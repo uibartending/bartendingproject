@@ -12,7 +12,7 @@ homepage_images = [
 data = [
 {
        "id":"0",
-        "title":"margarita",
+        "title":"Margarita",
        "img":"https://www.patrontequila.com/binaries/content/gallery/patrontequila/recipes/patron-silver/patron-classic-margarita/hero_640x650_patron-classic-margarita.jpg",
         "ingredients":[
             {
@@ -94,7 +94,7 @@ data = [
     },
     {
        "id":"1",
-       "title":"cosmo",
+       "title":"Cosmopolitan",
         "img":"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/cosmopolitan-7a6874f.jpg?quality=90&webp=true&resize=440,400",
        "ingredients":[
            {
