@@ -91,6 +91,7 @@ data = [
                 "img":["https://bakingamoment.com/wp-content/uploads/2019/04/IMG_4056-margarita-ingredients.jpg"]
             },
         ],
+        "description":"A margarita is a sweet, sour, and salty cocktail that is guaranteed to please a crowd! Many people enjoy these strong and refershing drinks paired with Mexican food, but after learning our recipe here you can make them for any occasion!",
     },
     {
        "id":"1",
@@ -184,7 +185,8 @@ data = [
                "ingredients":["orange peel"],
                "img":["https://www.jocooks.com/wp-content/uploads/2020/03/cosmopolitan-cocktail-1-3.jpg"]
            },
-       ]
+       ],
+       "description":"",
     },
 
     {
@@ -279,7 +281,8 @@ data = [
                "ingredients":["pineapple leaf", "pineapple wedge"],
                "img":["https://farm2.staticflickr.com/1829/29461128088_45fcc94bb4_o.jpg"]
            },
-       ]
+       ],
+       "description":"",
 },
 ]
 userErrors={}
@@ -348,12 +351,14 @@ def learn(id, kind, page):
             to_display = drink
     materials=to_display["ingredients"]
     tools=to_display["tools"]
+    title=to_display["title"]
+    description=to_display["description"]
     steps=to_display["steps"]
     step=steps[0]
     for i in steps:
         if i["id"]==str(int(page)-1):
             step=i
-    return(render_template(template, materials=materials, tools=tools, step=step, page=page, id=id))
+    return(render_template(template, materials=materials, tools=tools, step=step, page=page, id=id, title=title, description=description))
 
 
 @app.route('/quiz/<quiznum>/<id>')
