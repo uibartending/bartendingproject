@@ -1,8 +1,10 @@
 
 
 function display_materials(materials, tools, page){
+    $('.header').append("<div class='title text-center'>"+title+"</div>")
     /*if page is 1, put ingredient images and text into a column by only putting */
     if(String(page)==="1"){
+        $('.header').append("<div class='description text-center'>"+description+"</div>")
         $("#section").append("Ingredients")
         let cols=0
         $.each(materials, function(index, value){
