@@ -1,4 +1,5 @@
-function display_step(step, page, materials, tools){
+function display_step(step, page, materials, tools, title){
+    $('.header').append("<div class='title text-center'>"+title+"</div>")
     /* print the step for the corresponding page */
     $("#instruction").append("STEP "+page+":<br>")
     $("#instruction").append(step["text"])
@@ -67,7 +68,7 @@ function back(page, id){
 }
 
 $(document).ready(function(){
-    display_step(step, page, materials, tools)
+    display_step(step, page, materials, tools, title)
 
     $(".next").click(function(){
         next(page, id)
