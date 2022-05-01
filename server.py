@@ -186,7 +186,7 @@ data = [
                "img":["https://www.jocooks.com/wp-content/uploads/2020/03/cosmopolitan-cocktail-1-3.jpg"]
            },
        ],
-       "description":"",
+       "description":"A Cosmopolitan, cosmo for short, is a simple Martini-style drink consisting of vodka, triplesec, cranberry juice, and lime juice best known for being a favorite of the characters on 'Sex and the City'. Channel your inner Carrie Bradshaw and learn how to make her favorite drink here!",
     },
 
     {
@@ -282,7 +282,7 @@ data = [
                "img":["https://farm2.staticflickr.com/1829/29461128088_45fcc94bb4_o.jpg"]
            },
        ],
-       "description":"",
+       "description":"This sweet and refreshing summer cocktail will transport you to a tropical beach no matter where you drink it. Served blended or over ice, this coconut-pineapple combo just can't be beat! Learn how to make your new favorite drink below.",
 },
 ]
 userErrors={}
