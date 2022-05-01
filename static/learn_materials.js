@@ -1,6 +1,6 @@
 
 
-function display_materials(materials, tools, page){
+function display_materials(materials, tools, page, title, description){
     $('.header').append("<div class='title text-center'>"+title+"</div>")
     /*if page is 1, put ingredient images and text into a column by only putting */
     if(String(page)==="1"){
@@ -63,7 +63,7 @@ function back(page){
 }
 
 $(document).ready(function(){
-    display_materials(materials, tools, page)
+    display_materials(materials, tools, page, title, description)
     
     $(".next").click(function(){
         next(page, id)
