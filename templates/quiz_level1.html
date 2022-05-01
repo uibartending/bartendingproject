@@ -8,13 +8,15 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
 <style>
+/*<link rel="stylesheet" type="text/css" href="main.css" />
+*/
     .header{
         background-color: lightgrey;
         font-size: 35;
         padding: 70px 20px;
     }
     .drop_zone{
-        background-color: lightblue;
+        background-color: lightskyblue;
         font-size: 20;
         font-weight: bold;
         padding: 15px;
@@ -37,50 +39,80 @@
     .ui-droppable-hover{
         background-color: rgb(110, 137, 146);
     }
+
+    .padding_top{
+        padding-top: 50px;
+    }
+    .padding_bottom{
+        padding-bottom: 50px;
+    }
+
+    .right{
+        float: right;
+    }
+
+    .left{
+        float: left;
+    }
+
+    .buttonAlignmnet{
+        position: absolute;
+        bottom: 0px;
+        left: 15px;
+    }
+
+    .buttonAlignmnet2{
+        position: absolute;
+        bottom: 0px;
+        right: 15px;
+    }
+
+    .centerit{
+        text-align: center;
+    }
+
+    .instructionsBackground{
+        background-color: lightskyblue;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
 </style>
 </head>
 <body>
 <div class="container">
-
-    <br>
-    <div class="row">
-        <div class="col-md-4">
-            <div>
-                <h2>Quiz: Make a Classic {{data[id].title}}</h2>
-            </div>
-        <div>
-                <h2>Level 1</h2></br>
-                <div>How well do you know your ingredients?</div>
-            </div>
-            <div>
-                <h2>Instructions</h2><br>
-                <div>Click images to drag and drop the correct ingredients into the glass</div>
-            </div>
+    <div style="padding-top: 20px;"></div>
+    <div class = "row">
+        <div class = "col-md-6 instructionsBackground">
+            <h2 class="padding_top centerit">Quiz: Make a Classic {{data[id].title}}</h2>
+            <div class="centerit">Quiz yourself on the drink making skills you have learned so far!</div>
+            <h3 class="padding_top centerit">Level 1</h3>
+            <div class="centerit">How well do you know your ingredients</div>
+            <h3 class="padding_top centerit">Instructions</h3>
+            <div class="centerit padding_bottom">Click images to drag and drop the correct ingredients into the glass</div>
+            <img src = {{data[id].img}} width="200px" class="center padding_bottom">
         </div>
-        <div class="col-md-4">
-            <div class="drop_zone" id="nppc_drop">Ingredients</div>
-            <div id="ppc"></div>
-        </div>
-        <div class="col-md-4">
-            <div class="drop_zone" id="ppc_drop" height="200px">Glass</div>
 
-            <div id="non_ppc"></div>
+        <div class="col-md-3">
+            <div class="drop_zone centerit" id="nppc_drop">Ingredients</div>
+            <div class="centerit" id="ppc"></div>
+            
+            <button type="button" id="checkButton" class="buttonAlignmnet left">Check</button>
         </div>
-        <div class="col-md-8"></div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-2">
-        <button type="button" id="checkButton">Check</button>
-    </div>
-    <div class="col-md-8"></div>
-    <div class="col-md-2">
-        <button type="button" id="doneButton">Done</button>
-    </div>
-</div>
 
+        <div class="col-md-3">
+            <div class="drop_zone centerit" id="ppc_drop" height="200px">Glass</div>
+            <div class="centerit" id="non_ppc"></div>
+
+            <button type="button" id="doneButton" class="buttonAlignmnet2 right">Done</button>
+        </div>
+
+    </div>
 </div>
 </body>
-</html>
 
 {% endblock %}
