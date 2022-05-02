@@ -1,11 +1,11 @@
 
 
 function display_materials(materials, tools, page, title, description){
-    $('.header').append("<div class='title text-center'>"+title+"</div>")
+    $('.header').append("<div class='title text-center title-style'>"+title+"</div>")
     /*if page is 1, put ingredient images and text into a column by only putting */
     if(String(page)==="1"){
-        $('.header').append("<div class='description text-center'>"+description+"</div>")
-        $("#section").append("Ingredients")
+        $('.header').append("<div class='description text-center description-space'>"+description+"</div>")
+        $("#section").append("<div class='ingredients-title-space'>Ingredients</div>")
         let cols=0
         $.each(materials, function(index, value){
             cols=cols+1
@@ -20,7 +20,7 @@ function display_materials(materials, tools, page, title, description){
         /*add next button*/
         let nextbutton = '<button class="next large-top-margin">Next</button>'
         $('#nextbutton').append(nextbutton)
-    } 
+    }
     /*if page is 2, put materials images and text into a column*/
     else{
         $("#section").append("Tools")
@@ -54,7 +54,7 @@ function next(page, id){
     else{
         window.location.href="/learn/"+id+"/steps/1"
     }
-    
+
 }
 function back(page){
     let prevpage = parseInt(page)
@@ -64,7 +64,7 @@ function back(page){
 
 $(document).ready(function(){
     display_materials(materials, tools, page, title, description)
-    
+
     $(".next").click(function(){
         next(page, id)
     })
