@@ -13,6 +13,7 @@
     let tools = {{tools|tojson}}
     console.log(tools)
     let id = {{id|tojson}}
+    let title = {{title|tojson}}
 </script>
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'learn_steps.js') }}"></script>
@@ -26,11 +27,11 @@
         <div class='col-md-8'>
             <div id='instruction'></div>
             <div class='row padded'>
-              <div class='col-md-6 item-style'>
+              <div class='col-md-5 item-style'>
                    <p>Ingredients needed: </p>
                    <div id='ing_images'></div>
               </div>
-              <div class='col-md-6 item-style'>
+              <div class='col-md-5 item-style'>
                     <p>Tools needed: </p>
                     <div id='tool_images'></div>
               </div>
