@@ -2,7 +2,7 @@
 function load_home(data){
     /* list available cocktails with links to learning pages */
     $.each(data, function(index, value){
-        let drink_button = "<div class='col'><a href='/learn/"+value["id"]+"/materials/1'>"+value["title"]+"<br><img src='"+value["img"]+"' alt='"+value["title"]+"' class='pic img-size'></a><br></div>"
+        let drink_button = "<div class='col'><a class='link-text-style' href='/learn/"+value["id"]+"/materials/1'>"+value["title"]+"<br><img src='"+value["img"]+"' alt='"+value["title"]+"' class='pic img-size'></a><br></div>"
         $("#cocktails").append(drink_button)
     })
 }
