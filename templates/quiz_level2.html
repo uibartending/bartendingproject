@@ -5,27 +5,15 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="{{ url_for('static', filename = 'quiz_level2.css') }}">
 <style> 
-  .arrow{
-    border: solid black; 
-    border-width: 0 3px 3px 0; 
-    display: inline-block; 
-    padding: 3px; 
-  }
-  
-  .up{
-    transform: rotate(-135deg); 
-    -webkit-transform: rotate(-135deg);
-  }
-  .down{
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-  }
   .centerit{
     text-align: center;
   }
 
   .instructionsBackground{
-    background-color: lightskyblue;
+    background-color: #F0F0F0;
+    outline-style: solid; 
+    outline-color: coral;
+    outline-width: medium;
   }
 
   .center {
@@ -85,8 +73,12 @@
   float: left;
 }
 
+.grey{
+  color: grey;
+}
+
 </style> 
-<body>
+<body style="background-color: #ebf6f5;">
 <div class="container"> 
   <h2 class="centerit" style="padding-top: 50px;">Quiz: Make a Classic {{data[id].title}}</h2>
     <div class="centerit" style="padding-bottom: 30px; color: grey;">Quiz yourself on the drink making skills you have learned so far!</div>
@@ -94,9 +86,9 @@
   <div class = "row">
     <div class="col-md-6 instructionsBackground">
       <h3 class="centerit" style="padding-top: 15%;">Level 2</h3>
-      <div class="centerit">How well do you know the proportions</div>
+      <div class="centerit grey">How well do you know the proportions</div>
       <h3 class="padding_top centerit">Instructions</h3>
-      <div class="centerit padding_bottom">Navigate to the textbox to type the amount of each ingredient <br>that should go into the glass to make the perfect drink!</div>
+      <div class="centerit padding_bottom grey">Navigate to the textbox to type the amount of each ingredient <br>that should go into the glass to make the perfect drink!</div>
       <img src = {{data[id].img}} width="300px" class="center" style="padding-bottom: 15%;">
     </div>
 
