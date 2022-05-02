@@ -369,6 +369,9 @@ def quiz(id, quiznum):
 
     return render_template(template, data=data, id=temp)
 
+@app.route('/end')
+def end():
+    return render_template('endpage.html', data=data, user_data=user_data)
 
 
 if __name__ == '__main__':
