@@ -103,13 +103,28 @@ function checkQuiz1(){
     }
     postErrors()
 }
+function checkQuiz3(){
+    console.log(ingredientsCorrect)
+    console.log(ppc_members)
+    for (i in ppc_members){
+        console.log(ppc_members[i] )
+        if (ingredientsCorrect.indexOf(ppc_members[i]) > -1){
+            console.log("Right")
+        }
+        else{
+            errors.push({"id" : id, "val":ppc_members[i]})
+            console.log("wrong")
+        }
+    }
+    postErrors()
+}
 function doneButton (){
     nextquiz = parseInt(subStringQuiz())+1
     drink = getRandomInt(length-1)
     console.log(nextquiz)
     console.log(length)
     if(nextquiz > (parseInt(length))) {
-        location.href = '/'
+        location.href = '/results'
     }
     else {
         location.href = '/quiz/' + nextquiz+"/" +drink
@@ -123,7 +138,7 @@ function makenames(ingredients, ppc_members){
         $(employee).addClass("nppc")
         $(employee).data("title", value)
         $(employee).data("id", index)
-        $(employee).text((index+1)+". "+value)
+        $(employee).text(value)
         $("#ppc").append(employee)
     })
     $.each(ppc_members, function(index, value) {
@@ -131,7 +146,7 @@ function makenames(ingredients, ppc_members){
         $(employee).addClass("ppc")
         $(employee).data("title", value)
         $(employee).data("id", index)
-        $(employee).text((index+1)+". "+value)
+        $(employee).text(value)
         $("#non_ppc").append(employee)
     })
 }
