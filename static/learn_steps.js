@@ -1,5 +1,5 @@
 function display_step(step, page, materials, tools, title){
-    $('.header').append("<div class='title text-center'>"+title+"</div>")
+    $('.header').append("<div class='title text-center title-style'>"+title+"</div>")
     /* print the step for the corresponding page */
     $("#instruction").append("STEP "+page+":<br>")
     $("#instruction").append(step["text"])
