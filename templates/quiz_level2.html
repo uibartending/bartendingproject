@@ -20,53 +20,106 @@
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
-</style> 
+  .centerit{
+    text-align: center;
+  }
 
+  .instructionsBackground{
+    background-color: lightskyblue;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .padding_top{
+    padding-top: 70px;
+  }
+  .padding_bottom{
+    padding-bottom: 70px;
+  }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item {
+  border: 1px solid lightgray; 
+  padding: 20px 0 20px 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.link{
+  display: grid;
+  place-items: center;
+}
+
+.label{
+  float: right;
+  display: block;
+}
+
+.buttonAlignmnet{
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+  float: left;
+}
+
+.buttonAlignmnet2{
+  position: absolute;
+  bottom: 0px;
+  right: 15px;
+}
+
+.right{
+  float: right;
+}
+
+.left{
+  float: left;
+}
+
+</style> 
 <body>
 <div class="container"> 
-  <div class="row">
+  <h2 class="centerit" style="padding-top: 50px;">Quiz: Make a Classic {{data[id].title}}</h2>
+    <div class="centerit" style="padding-bottom: 30px;">Quiz yourself on the drink making skills you have learned so far!</div>
 
-<div class="col-md-4">
-    <div>
-      <h2>Quiz: Make a Classic {{data[id].title}} {{id}}</h2>
+  <div class = "row">
+    <div class="col-md-6 instructionsBackground">
+      <h3 class="centerit" style="padding-top: 30%;">Level 2</h3>
+      <div class="centerit">How well do you know the proportions</div>
+      <h3 class="padding_top centerit">Instructions</h3>
+      <div class="centerit padding_bottom">Navigate to the textbox to type the amount of each ingredient <br>that should go into the glass to make the perfect drink!</div>
+      <img src = {{data[id].img}} width="300px" class="center" style="padding-bottom: 30%;">
     </div>
-    <div>
-      <h2>Level 2</h2><br>
-      <div>How well do you know the proportions?</div>
-    </div>
-    <div>
-      <h2>Instructions</h2><br>
-      <div>Adjust the amount of each ingredient to make the perfect drink!</div>
-    </div>
-</div> 
 
-
-  <div class="col-md-8">
-      <div class="container-buffer">
-    <div class="row">   
-    {% for ingredients in data[id].ingredients %} <!--loop through the ingredient images-->
-        <div class = "col-md-4"><img class="img-size" src= {{ingredients.img}}></div>
-        <div class = "col-md-2">{{ingredients.name}}</div>
-        <div class = "col-md-4"> <input type="text" id={{ingredients.id}}> 
-        <div class="col-md-1">{{ingredients.unit}}</div>
-        </div>
-    {% endfor %}
-    </div>
+    <div class="col-md-6">
+      <div class="grid-container center">
+        {% for ingredients in data[id].ingredients %}
+          <div class="grid-item link"><img class="img-size" src={{ingredients.img}}></div>
+          <div class="grid-item link" style="font-size: 15px;">{{ingredients.name}}</div>
+          <div class="grid-item link">
+          <input type="text" id={{ingredients.id}}><p>{{ingredients.unit}}</p>
+          </div>
+        {% endfor %}
       </div>
-</div>
-</div>
 
-<div class="row">
-    <div class="col-md-2">
-        <button type="button" id="checkButton">Check</button>
-    </div>
-    <div class="col-md-8"></div>
-    <div class="col-md-2">
-        <button type="button" id="doneButton">Done</button>
-    </div>
-</div>
+      <button type="button" id="checkButton" class="buttonAlightment left">Check</button>
+      <button type="button" id="doneButton" class="buttonAlightment2 right">Next</button>
 
+    </div>
+
+  </div>
+  <div style="padding-bottom: 50px;"></div>
+
+</div>
 </body> 
-
     
 {% endblock %}
