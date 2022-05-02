@@ -10,6 +10,11 @@
   background-color: #ebf6f5;
 }
 
+.link-text-style {
+  color: darkgrey;
+  padding-bottom: 20px;
+}
+
 .main-dashboard {
   border: solid 1px black;
   padding: 50px;
