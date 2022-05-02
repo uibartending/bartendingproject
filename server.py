@@ -373,6 +373,12 @@ def quiz(id, quiznum):
 def end():
     return render_template('endpage.html', data=data, user_data=user_data)
 
+@app.route('/results')
+def results():
+    global userErrors
+    global data
+    print(userErrors)
+    return render_template('results.html', data=data, userErrors=userErrors)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', debug=True)
