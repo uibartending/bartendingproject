@@ -1,10 +1,23 @@
 .img-size {
   width: 100px;
   height: 100px;
+  padding-left: 5px;
+  padding-bottom: 5px;
 }
 
 .large-top-margin {
   margin-top: 80px;
+}
+
+.title-style {
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.subtitle-style {
+  color: darkgrey;
+  padding-bottom: 10px;
 }
 
 .item-style {
@@ -19,4 +32,8 @@
   width: 200px;
   height: 200px;
   object-fit: cover;
+}
+
+#instruction {
+  padding-bottom: 20px;
 }
