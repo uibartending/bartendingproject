@@ -1,5 +1,13 @@
 .nav-bg-color {
-  background-color: lightgrey;
+  background-color: coral;
+}
+
+.nav-text-color {
+  color: white;
+}
+
+.base-color {
+  background-color: #ebf6f5;
 }
 
 .main-dashboard {
