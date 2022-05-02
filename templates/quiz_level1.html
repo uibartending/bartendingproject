@@ -85,15 +85,15 @@
 </head>
 <body>
 <div class="container">
-    <div style="padding-top: 20px;"></div>
+    <h2 class="padding_top centerit">Quiz: Make a Classic {{data[id].title}}</h2>
+    <div class="centerit" style="padding-bottom: 30px;">Quiz yourself on the drink making skills you have learned so far!</div>
+
     <div class = "row">
         <div class = "col-md-6 instructionsBackground">
-            <h2 class="padding_top centerit">Quiz: Make a Classic {{data[id].title}}</h2>
-            <div class="centerit">Quiz yourself on the drink making skills you have learned so far!</div>
             <h3 class="padding_top centerit">Level 1</h3>
             <div class="centerit">How well do you know your ingredients</div>
             <h3 class="padding_top centerit">Instructions</h3>
-            <div class="centerit padding_bottom">Click images to drag and drop the correct ingredients into the glass</div>
+            <div class="centerit padding_bottom">Click to drag and drop the correct ingredients <br> onto the glass label to make the perfect drink</div>
             <img src = {{data[id].img}} width="200px" class="center padding_bottom">
         </div>
 
@@ -110,8 +110,9 @@
 
             <button type="button" id="doneButton" class="buttonAlignmnet2 right">Done</button>
         </div>
-
     </div>
+
+    <div style="padding-bottom: 50px;"></div>
 </div>
 </body>
 
