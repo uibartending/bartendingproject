@@ -4,58 +4,92 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
 
+<style>
+.centerit{
+  text-align: center;
+}
+.padding_top{
+  padding-top: 50px;
+}
+.padding_bottom{
+  padding-bottom: 50px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.instructionsBackground{
+  background-color: lightskyblue;
+}
+
+.whitespace{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.right{
+  float: right;
+}
+
+.left{
+  float: left;
+}
+
+.buttonAlignmnet{
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+  float: left;
+}
+
+.buttonAlignmnet2{
+  position: absolute;
+  bottom: 0px;
+  right: 15px;
+}
+
+</style>
 <body>
 <div class="container">
-  <div>
-  <h2>Quiz: Make a Classic {{data[id].title}}</h2>
-</div>
+  <h2 class="centerit padding_top">Quiz: Make a Classic {{data[id].title}}</h2>
+  <div class="centerit" style="padding-bottom: 30px;">Quiz yourself on the drink making skills you have learned so far!</div>
+
   <div class="row">
+    <div class="col-md-6 instructionsBackground">
+      <h3 class="padding-top centerit" style="padding-top: 50px;">Level 3</h3>
+      <div class="centerit">You've studied ingredients and proportions! <br> How well do you know how to make this drink?</div>
+      <h3 class="padding_top centerit">Instructions</h3>
+      <div class="centerit padding_bottom">Fill in the blanks to make the perfect drink! <br> Type freely or use the arrows to increment and decrement the values</div>
+      <img src = {{data[id].img}} width="200px" class="center padding_bottom">
+    </div>
 
-<div class="col-md-4">
-  <div>
-    <img src = {{data[id].img}} width="300px">
+    <div class="col-md-6">
+      {% for ingredient in data[id].ingredients %}
+      <div class="row whitespace">
+        <div class="col-md-4">
+          <input type = "number" placeholder = "ingredient amount" id={{ingredient.id}}>
+        </div>
+        <div class="col-md-4" style="text-align: center;">
+          {{ingredient.unit}}
+        </div>
+        <div class="col-md-4">
+          <input type="text" placeholder = "ingredient name" id={{ingredient.name}}>
+        </div>
+      </div>
+      {% endfor %}
+
+      <div class="bottom: 0px">
+      <button type="button" id="checkButton" class="buttonAlightment left">Check</button>
+      <button type="button" id="doneButton" class="buttonAlightment2 right">Next</button>
+      </div>
+    </div>
   </div>
-  <div >
-    <h2>Level 3</h2><br>
-    <div>How well do you know how to make this drink?</div>
-  </div>
-  <div >
-    <h2>Instructions</h2><br>
-    <div>Fill in the blanks to make the perfect drink!</div>
-  </div>
-</div>
-<div class="col-md-8">
-
-  {% for ingredient in data[id].ingredients %} <!--loop through each ingredient-->
-  <div class="row"> <!--create a new row-->
-    <div class="col-md-4">
-      <input type="number" placeholder = "ingredient amount" id={{ingredient.id}}>
-    </div>
-    <div class="col-md-2">
-      {{ingredient.unit}}
-    </div>
-    <div class="col-md-3">
-      <input type="text" placeholder = "ingredient name" id={{ingredient.name}}>
-    </div>
-
-  </div>
-  {% endfor %}
-</div>
-</div>
-
-<div class="row">
-    <div class="col-md-2">
-        <button type="button" id="checkButton">Check</button>
-    </div>
-    <div class="col-md-8"></div>
-    <div class="col-md-2">
-        <button type="button" id="doneButton">Done</button>
-    </div>
-</div>
+  <div style="padding-bottom: 50px;"></div>
 
 </div>
-</div>
-
 </body>
 
 {% endblock %}
