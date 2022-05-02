@@ -1,8 +1,34 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<h2 style="padding: 50px; text-align: center">Congratulations!</h2>
-<h2 style="text-align:center">You have successfully completed the quiz!</h2>
-<div style="text-align: center"> Score = 3 </div>
+<style>
+.centerCongrats{
+	width: 100%;
+	height: 50%;
+	background: lightskyblue;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.padding_top{
+  padding-top: 50px;
+}
+
+.centerit{
+  text-align: center;
+}
+</style>
+
+<body>
+
+<h2 class="centerCongrats">Congratulations!</h2>
+
+<h3 class="padding_top centerit">You have successfully completed the quiz!</h3>
+<div class="centerit">By now, you should be an expert at making a Margaritas, Cosmopolitans, <br>and Piña Coladas, which you can impress your friends and loved ones with! Great job!</div>
+<h4 class="padding_top centerit">Your Score is:</h4>
+
+</body>
 
 {% endblock %}
