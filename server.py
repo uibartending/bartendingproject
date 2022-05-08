@@ -378,7 +378,8 @@ def results():
     global userErrors
     global data
     print(userErrors)
-    return render_template('results.html', data=data, userErrors=userErrors)
+    numWrong = len(userErrors)
+    return render_template('results.html', data=data, numWrong=numWrong)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', debug=True)
