@@ -173,6 +173,37 @@ function getRandomInt(max) {
     console.log(temp)
     return (temp);
 }
+function open_dialogue(correct){
+    if(correct){
+    $( "#correct_dialog" ).dialog({
+        autoOpen: false, 
+        buttons: {
+            Continue: function() {
+                $(this).dialog("close");
+                $("#doneButton").click();
+            }
+        },
+        title: "Correct!",
+     });
+     $('#correct_dialog').dialog('open');
+    }
+    else{
+        $( "#incorrect_dialog" ).dialog({
+            autoOpen: false, 
+            buttons: {
+                Retry: function() {
+                    $(this).dialog("close");
+                },
+                Skip: function() {
+                    $(this).dialog("close");
+                    $("#doneButton").click();
+                }
+            },
+            title: "Not quite!",
+         });
+         $('#incorrect_dialog').dialog('open');
+    }
+}
 $(document).ready(function(){
     postVa()
     $("#checkButton").click(function() {
@@ -185,6 +216,12 @@ $(document).ready(function(){
         checkQuiz2()}
         if (temp == 3) {
             checkQuiz3()}
+        if(errors.length===0){
+            open_dialogue(1)
+        }
+        else{
+            open_dialogue(0)
+        }
     });
     $("#doneButton").click(function() {
         doneButton()
