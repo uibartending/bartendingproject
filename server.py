@@ -378,7 +378,7 @@ def results():
     global userErrors
     global data
     print(userErrors)
-    numWrong = len(userErrors)
+    numWrong = len(userErrors["ChiltonL"])
     return render_template('results.html', data=data, numWrong=numWrong)
 
 if __name__ == '__main__':
