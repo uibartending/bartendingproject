@@ -108,12 +108,24 @@ function checkQuiz3(){
     console.log(ppc_members)
     for (i in drink["ingredients"]){
         id = drink["ingredients"][i]['id']
-        testid = "text"+id
+        testid = "#text"+id
+        id = "#"+id
         if($(id).val() == drink["ingredients"][i]['amt'] && $(testid).val().toString().toLowerCase() == drink["ingredients"][i]['name'].toLowerCase()){
             console.log("correct")
         }
+        else if($(id).val() == drink["ingredients"][i]['amt']){
+            errors.push({"id" : id, "val": drink["ingredients"][i]['name'], "amt" : $(testid).val() })
+            $(testid).val("INCORRECT");
+        }
+        else if($(testid).val() == drink["ingredients"][i]['name'].toLowerCase()){
+            errors.push({"id" : id, "val": drink["ingredients"][i]['name'], "amt" : $(testid).val() })
+            $(id).val("999999999999");
+        }
         else{
             errors.push({"id" : id, "val": drink["ingredients"][i]['name'], "amt" : $(testid).val() })
+            $(id).val("999999999999");
+            $(testid).val("INCORRECT");
+            //console.log("y")
         }
 
     }
