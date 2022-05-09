@@ -76,13 +76,13 @@
       {% for ingredient in data[id].ingredients %}
       <div class="row whitespace">
         <div class="col-md-4">
-          <input type = "number" placeholder = "ingredient amount" id={{ingredient.id}}>
+          <input type = "number" placeholder = "ingredient amount" id='{{ingredient.id}}'>
         </div>
         <div class="col-md-4" style="text-align: center;">
           {{ingredient.unit}}
         </div>
         <div class="col-md-4">
-          <input type="text" placeholder = "ingredient name" id={{ingredient.name}}>
+          <input type="text" placeholder = "ingredient name" id='text{{ingredient.id}}'>
         </div>
       </div>
       {% endfor %}
@@ -98,4 +98,14 @@
 </div>
 </body>
 
+
+
+
+
 {% endblock %}
+   
+
+
+
+
+
