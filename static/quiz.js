@@ -106,15 +106,16 @@ function checkQuiz1(){
 function checkQuiz3(){
     console.log(ingredientsCorrect)
     console.log(ppc_members)
-    for (i in ppc_members){
-        console.log(ppc_members[i] )
-        if (ingredientsCorrect.indexOf(ppc_members[i]) > -1){
-            console.log("Right")
+    for (i in drink["ingredients"]){
+        id = drink["ingredients"][i]['id']
+        testid = "text"+id
+        if($(id).val() == drink["ingredients"][i]['amt'] && $(testid).val().toString().toLowerCase() == drink["ingredients"][i]['name'].toLowerCase()){
+            console.log("correct")
         }
         else{
-            errors.push({"id" : id, "val":ppc_members[i]})
-            console.log("wrong")
+            errors.push({"id" : id, "val": drink["ingredients"][i]['name'], "amt" : $(testid).val() })
         }
+
     }
     postErrors()
 }
@@ -170,6 +171,8 @@ $(document).ready(function(){
         }
         if (temp == 2) {
         checkQuiz2()}
+        if (temp == 3) {
+            checkQuiz3()}
     });
     $("#doneButton").click(function() {
         doneButton()
